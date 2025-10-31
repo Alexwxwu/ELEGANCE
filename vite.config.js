@@ -23,7 +23,7 @@ export default defineConfig({
       ],
     }),
   ],
-  base:'/ELEGANCE',
+  base:'/ELEGANCE/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
