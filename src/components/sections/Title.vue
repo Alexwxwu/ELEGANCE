@@ -86,9 +86,9 @@ AV-TSE models: linguistic constraints, linguistic prediction, and input linguist
 // 提供引导资料链接
 const buttons = [
   {
-    disabled: true,
+    disabled: false,
     name: "Paper",
-    component: Document,
+   link: "arixv",
   },
   // {
   //   disabled: true,
@@ -135,7 +135,6 @@ const buttons = [
 
 <template>
   <div>
-
 
     <!-- 文章logo -->
     <el-row v-if="logo" justify="center">
@@ -186,22 +185,7 @@ const buttons = [
         {{ emphasis }}
     </el-row>
 
-    <!-- 提供引导按钮 -->
-    <el-row justify="center" style="margin-bottom: 20px;">
-      <el-col :span="20">
-        <el-row justify="center">
-          <a :href=button.link v-for="button in buttons">
-            <el-button class="guidance-button" size="default" :color="btn_color" :disabled="button.disabled" round>
-              <el-icon :size="18">
-                <component :is="button.component" />
-              </el-icon>
-              <span class="btn-text">{{ button.name }}</span>
-            </el-button>
-          </a>
-        </el-row>
-      </el-col>
-    </el-row>
-
+ 
   </div>
 </template>
 
