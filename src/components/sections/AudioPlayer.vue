@@ -14,40 +14,13 @@
         </select>
       </div>
 
-      <!-- 音频文件选择器 -->
-      <div class="audio-selector">
-        <label for="audio-select">Select Audio File:</label>
-        <select id="audio-select" v-model="selectedAudio" @change="onAudioChange">
-          <option value="">Please select an audio file</option>
-          <option v-for="audio in audioFiles" :key="audio" :value="audio">
-            {{ formatAudioName(audio) }}
-          </option>
-        </select>
-      </div>
-
       <!-- 音频播放器部分 -->
       <div class="audio-content">
         <div class="audio-grid">
-          <!-- 混合音频 -->
-          <div class="audio-item">
-            <h3>Mixture</h3>
-            <audio controls :src="getAudioPath('mixture', selectedAudio)">
-              Your browser does not support audio playback.
-            </audio>
-          </div>
-
-          <!-- Ground Truth -->
-          <div class="audio-item">
-            <h3>Ground Truth</h3>
-            <audio controls :src="getAudioPath('gt', selectedAudio)">
-              Your browser does not support audio playback.
-            </audio>
-          </div>
-
           <!-- 动态生成的音频项 -->
-          <div v-for="method in currentMethods" :key="method" class="audio-item">
-            <h3>{{ method }}</h3>
-            <audio controls :src="getAudioPath(method, selectedAudio)">
+          <div v-for="audio in currentAudioFiles" :key="audio.name" class="audio-item">
+            <h3>{{ audio.name }}</h3>
+            <audio controls :src="audio.path">
               Your browser does not support audio playback.
             </audio>
           </div>
@@ -62,26 +35,23 @@ export default {
   name: 'AudioPlayer',
   data() {
     return {
-      selectedCategory: 'guidance', // 默认选中第一个分类
-      // 每个分类对应的音频文件列表（包含名称和路径）
+      selectedCategory: 'guidance',
       audioFilesByCategory: {
         guidance: [
           { name: 'USEV', path: '/ELEGANCE/output_audio/guidance/USEV.wav' },
           { name: 'USEV-I-Roberta', path: '/ELEGANCE/output_audio/guidance/USEV-I-Roberta.wav' },
-            { name: 'USEV-M-Roberta', path: '/ELEGANCE/output_audio/guidance/USEV-M-Roberta.wav' },
-              { name: 'USEV-O-Roberta', path: '/ELEGANCE/output_audio/guidance/USEV-O-Roberta.wav' },
+          { name: 'USEV-M-Roberta', path: '/ELEGANCE/output_audio/guidance/USEV-M-Roberta.wav' },
+          { name: 'USEV-O-Roberta', path: '/ELEGANCE/output_audio/guidance/USEV-O-Roberta.wav' },
           { name: 'AV-Mamba', path: '/ELEGANCE/output_audio/guidance/AV-Mamba.wav' },
-           { name: 'AV-Mamba-I-Roberta', path: '/ELEGANCE/output_audio/guidance/AV-Mamba-I-Roberta.wav' },
-           { name: 'AV-Mamba-M-Roberta', path: '/ELEGANCE/output_audio/guidance/AV-Mamba-M-Roberta.wav' },
-           { name: 'AV-Mamba-O-Roberta', path: '/ELEGANCE/output_audio/guidance/AV-Mamba-O-Roberta.wav' },
-          // 其他guidance类别的音频...
+          { name: 'AV-Mamba-I-Roberta', path: '/ELEGANCE/output_audio/guidance/AV-Mamba-I-Roberta.wav' },
+          { name: 'AV-Mamba-M-Roberta', path: '/ELEGANCE/output_audio/guidance/AV-Mamba-M-Roberta.wav' },
+          { name: 'AV-Mamba-O-Roberta', path: '/ELEGANCE/output_audio/guidance/AV-Mamba-O-Roberta.wav' }
         ],
         llm: [
           { name: 'USEV', path: '/ELEGANCE/output_audio/llm/USEV.wav' },
           { name: 'USEV-I-Roberta', path: '/ELEGANCE/output_audio/llm/USEV-I-Roberta.wav' },
           { name: 'USEV-I-Qwen0.6b', path: '/ELEGANCE/output_audio/llm/USEV-I-Qwen0.6b.wav' },
-          { name: 'USEV-I-Qwen4b', path: '/ELEGANCE/output_audio/llm/USEV-I-Qwen4b.wav' },
-          // 其他llm类别的音频...
+          { name: 'USEV-I-Qwen4b', path: '/ELEGANCE/output_audio/llm/USEV-I-Qwen4b.wav' }
         ],
         crosslingual: [
           { name: 'USEV-PT', path: '/ELEGANCE/output_audio/crosslingual/USEV-PT.wav' },
@@ -91,21 +61,17 @@ export default {
           { name: 'USEV-ES', path: '/ELEGANCE/output_audio/crosslingual/USEV-ES.wav' },
           { name: 'USEV-I-Roberta-ES', path: '/ELEGANCE/output_audio/crosslingual/USEV-I-Roberta-ES.wav' },
           { name: 'USEV-FR', path: '/ELEGANCE/output_audio/crosslingual/USEV-FR.wav' },
-           { name: 'USEV-I-Roberta-FR', path: '/ELEGANCE/output_audio/crosslingual/USEV-I-Roberta-FR.wav' },
-
-          // 其他crosslingual类别的音频...
+          { name: 'USEV-I-Roberta-FR', path: '/ELEGANCE/output_audio/crosslingual/USEV-I-Roberta-FR.wav' }
         ]
       }
     }
   },
   computed: {
-    // 当前分类对应的音频文件列表
     currentAudioFiles() {
       return this.audioFilesByCategory[this.selectedCategory] || [];
     }
   },
   methods: {
-    // 切换分类时重置音频
     onCategoryChange() {
       const audioElements = this.$el.querySelectorAll('audio');
       audioElements.forEach(audio => {
@@ -116,6 +82,7 @@ export default {
   }
 }
 </script>
+
 <style scoped>
 .audio-player-section {
   padding: 2rem;
@@ -156,9 +123,6 @@ export default {
   border-color: #007bff;
 }
 
-<style scoped>
-/* ... (previous styles) ... */
-
 .audio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -189,32 +153,4 @@ export default {
   width: 100%;
   margin-bottom: 0.5rem;
 }
-
-.category-selector {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.category-selector button {
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.category-selector button:hover {
-  background-color: #0056b3;
-}
-
-.category-selector button.active {
-  background-color: #0056b3;
-  font-weight: bold;
-}
 </style>
-
- 
-
