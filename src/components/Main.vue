@@ -23,7 +23,6 @@ export default {
     Abstract,
     Markdown,
     BibTeX,
-    Carousel,
     Video,
     ImageSlider,
     ImageSliderInner,
@@ -42,16 +41,12 @@ export default {
 
 <template>
   <Title/>
-  <Carousel/>
-  <Video/>
   <Abstract/>
   <Markdown/>
-  <Latex/>
+   <Video/>
   <Table/>
   <Collapse/>
   <Echart/>
-  <Model3D/>
-  <GaussianSplats3D/>
   <SeletionForComparison/>
   <ImageSliderInner/>
   <ImageSlider/>
