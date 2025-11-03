@@ -16,7 +16,7 @@ const title_color = '#000000'
 const title_supp = ''
 
 // 标题补充颜色
-const title_supp_color = '#42B883'
+const title_supp_color = '#43B883'
 
 // 按钮颜色
 const btn_color = '#444444'
@@ -89,6 +89,7 @@ const buttons = [
     disabled: false,
     name: "Paper",
    link: "arixv",
+	component: Document,
   },
   // {
   //   disabled: true,
@@ -183,6 +184,22 @@ const buttons = [
     <!-- 强调内容 -->
     <el-row justify="center" class="emphasis" v-for="emphasis in emphases">
         {{ emphasis }}
+    </el-row>
+
+	<!-- 提供引导按钮 -->
+    <el-row justify="center" style="margin-bottom: 20px;">
+      <el-col :span="20">
+        <el-row justify="center">
+          <a :href=button.link v-for="button in buttons">
+            <el-button class="guidance-button" size="default" :color="btn_color" :disabled="button.disabled" round>
+              <el-icon :size="18">
+                <component :is="button.component" />
+              </el-icon>
+              <span class="btn-text">{{ button.name }}</span>
+            </el-button>
+          </a>
+        </el-row>
+      </el-col>
     </el-row>
 
  
