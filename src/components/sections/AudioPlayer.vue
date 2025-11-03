@@ -147,8 +147,8 @@ export default {
   border-color: #007bff;
 }
 
-/* <style scoped>
-/* ... (previous styles) ... */ */
+<style scoped>
+/* ... (previous styles) ... */
 
 .audio-grid {
   display: grid;
@@ -207,37 +207,5 @@ export default {
 }
 </style>
 
-<template>
-  <section class="audio-player-section">
-    <h2 class="section-title">Audio Comparison</h2>
-    
-    <div class="category-selector">
-      <button 
-        v-for="category in Object.keys(methodsByCategory)" 
-        :key="category"
-        @click="selectedCategory = category; onCategoryChange()"
-        :class="{ active: selectedCategory === category }"
-      >
-        {{ category.charAt(0).toUpperCase() + category.slice(1) }}
-      </button>
-    </div>
-    
-    <div class="audio-selector">
-      <label for="audio-select">Select Audio Sample:</label>
-      <select id="audio-select" v-model="selectedAudio" @change="onAudioChange">
-        <option value="">Choose an audio file</option>
-        <option v-for="file in audioFiles" :key="file" :value="file">
-          {{ formatAudioName(file) }}
-        </option>
-      </select>
-    </div>
-
-    <div v-if="selectedAudio" class="audio-grid">
-      <div v-for="method in currentMethods" :key="method" class="audio-item">
-        <h3>{{ method }}</h3>
-        <audio :src="getAudioPath(method, selectedAudio)" controls></audio>
-      </div>
-    </div>
-  </section>
-</template>
+ 
 
