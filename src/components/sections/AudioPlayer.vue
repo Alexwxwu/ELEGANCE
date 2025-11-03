@@ -1,75 +1,115 @@
 <template>
+  <div>
     <el-divider />
-  <div class="audio-player-section">
-    <h2 class="section-title">Audio Separation Results</h2>
-    
-    <!-- 音频文件选择器 -->
-    <div class="audio-selector">
-      <label for="audio-select">Select Audio File:</label>
-      <select id="audio-select" v-model="selectedAudio" @change="onAudioChange">
-        <option value="">Please select an audio file</option>
-        <option v-for="audio in audioFiles" :key="audio" :value="audio">
-          {{ formatAudioName(audio) }}
-        </option>
-      </select>
-    </div>
+    <div class="audio-player-section">
+      <h2 class="section-title">Audio Separation Results</h2>
 
-    <!-- 音频播放器和频谱图展示 -->
-    <div class="audio-content">
-      <div class="audio-grid">
-        <!-- 混合音频 -->
-        <div class="audio-item">
-          <h3>Mixture</h3>
-          <div class="spectrogram-container">
-            <img :src="getSpectrogramPath('mixture', selectedAudio)" :alt="`Mixture spectrogram`" />
-          </div>
-          <audio controls :src="getAudioPath('mixture', selectedAudio)">
-            Your browser does not support audio playback.
-          </audio>
-        </div>
+      <!-- 音频文件选择器 -->
+      <div class="audio-selector">
+        <label for="audio-select">Select Audio File:</label>
+        <select id="audio-select" v-model="selectedAudio" @change="onAudioChange">
+          <option value="">Please select an audio file</option>
+          <option v-for="audio in audioFiles" :key="audio" :value="audio">
+            {{ formatAudioName(audio) }}
+          </option>
+        </select>
+      </div>
 
-        <!-- Ground Truth -->
-        <div class="audio-item">
-          <h3>Ground Truth</h3>
-          <div class="spectrogram-container">
-            <img :src="getSpectrogramPath('gt', selectedAudio)" :alt="`Ground truth spectrogram`" />
+      <!-- 音频播放器部分 -->
+      <div class="audio-content">
+        <div class="audio-grid">
+          <!-- 混合音频 -->
+          <div class="audio-item">
+            <h3>Mixture</h3>
+            <!-- 省略频谱图片部分 -->
+            <audio controls :src="getAudioPath('mixture', selectedAudio)">
+              Your browser does not support audio playback.
+            </audio>
           </div>
-          <audio controls :src="getAudioPath('gt', selectedAudio)">
-            Your browser does not support audio playback.
-          </audio>
-        </div>
 
-        <!-- Dolphin 结果 -->
-        <div class="audio-item">
-          <h3>Dolphin (Ours)</h3>
-          <div class="spectrogram-container">
-            <img :src="getSpectrogramPath('Dolphin', selectedAudio)" :alt="`Dolphin separation result spectrogram`" />
+          <!-- Ground Truth -->
+          <div class="audio-item">
+            <h3>Ground Truth</h3>
+            <!-- 省略频谱图片部分 -->
+            <audio controls :src="getAudioPath('gt', selectedAudio)">
+              Your browser does not support audio playback.
+            </audio>
           </div>
-          <audio controls :src="getAudioPath('Dolphin', selectedAudio)">
-            Your browser does not support audio playback.
-          </audio>
-        </div>
 
-        <!-- AV-Mossformer2 结果 -->
-        <div class="audio-item">
-          <h3>AV-Mossformer2</h3>
-          <div class="spectrogram-container">
-            <img :src="getSpectrogramPath('AV-Mossformer2', selectedAudio)" :alt="`AV-Mossformer2 separation result spectrogram`" />
+          <!-- USEV -->
+          <div class="audio-item">
+            <h3>USEV</h3>
+            <!-- 省略频谱图片部分 -->
+            <audio controls :src="getAudioPath('USEV', selectedAudio)">
+              Your browser does not support audio playback.
+            </audio>
           </div>
-          <audio controls :src="getAudioPath('AV-Mossformer2', selectedAudio)">
-            Your browser does not support audio playback.
-          </audio>
-        </div>
 
-        <!-- IIANet 结果 -->
-        <div class="audio-item">
-          <h3>IIANet</h3>
-          <div class="spectrogram-container">
-            <img :src="getSpectrogramPath('IIANet', selectedAudio)" :alt="`IIANet separation result spectrogram`" />
+          <!-- USEV-I-Roberta -->
+          <div class="audio-item">
+            <h3>USEV-I-Roberta</h3>
+            <!-- 省略频谱图片部分 -->
+            <audio controls :src="getAudioPath('USEV-I-Roberta', selectedAudio)">
+              Your browser does not support audio playback.
+            </audio>
           </div>
-          <audio controls :src="getAudioPath('IIANet', selectedAudio)">
-            Your browser does not support audio playback.
-          </audio>
+
+          <!--  USEV-M-Roberta-->
+          <div class="audio-item">
+            <h3>USEV-M-Roberta</h3>
+            <!-- 省略频谱图片部分 -->
+            <audio controls :src="getAudioPath('USEV-M-Roberta', selectedAudio)">
+              Your browser does not support audio playback.
+            </audio>
+          </div>
+                <!--  USEV-O-Roberta-->
+          <div class="audio-item">
+            <h3>USEV-O-Roberta</h3>
+            <!-- 省略频谱图片部分 -->
+            <audio controls :src="getAudioPath('USEV-O-Roberta', selectedAudio)">
+              Your browser does not support audio playback.
+            </audio>
+          </div>
+
+
+
+             <!-- AV-Mamba -->
+          <div class="audio-item">
+            <h3>AV-Mamba</h3>
+            <!-- 省略频谱图片部分 -->
+            <audio controls :src="getAudioPath('AV-Mamba', selectedAudio)">
+              Your browser does not support audio playback.
+            </audio>
+          </div>
+
+          <!-- AV-Mamba-I-Roberta -->
+          <div class="audio-item">
+            <h3>AV-Mamba-I-Roberta</h3>
+            <!-- 省略频谱图片部分 -->
+            <audio controls :src="getAudioPath('AV-Mamba-I-Roberta', selectedAudio)">
+              Your browser does not support audio playback.
+            </audio>
+          </div>
+
+          <!-- AV-Mamba-M-Roberta-->
+          <div class="audio-item">
+            <h3>AV-Mamba-M-Roberta</h3>
+            <!-- 省略频谱图片部分 -->
+            <audio controls :src="getAudioPath('AV-Mamba-M-Roberta', selectedAudio)">
+              Your browser does not support audio playback.
+            </audio>
+          </div>
+                <!--  USEV-O-Roberta-->
+          <div class="audio-item">
+            <h3>AV-Mamba-O-Roberta</h3>
+            <!-- 省略频谱图片部分 -->
+            <audio controls :src="getAudioPath('AV-Mamba-O-Roberta', selectedAudio)">
+              Your browser does not support audio playback.
+            </audio>
+          </div>
+            
+            
+            
         </div>
       </div>
     </div>
@@ -99,10 +139,7 @@ export default {
       return `Audio Sample ${parts[1] || '1'}`;
     },
     getAudioPath(method, filename) {
-      return `/Dolphin/output_audio/${method}/${filename}.wav`;
-    },
-    getSpectrogramPath(method, filename) {
-      return `/Dolphin/output_audio_mag/${method}/${filename}.png`;
+      return `/ELEGANCE/output_audio/${method}/${filename}.wav`;
     },
     onAudioChange() {
       // 停止所有正在播放的音频
@@ -187,22 +224,6 @@ export default {
   text-align: center;
   border-bottom: 2px solid #007bff;
   padding-bottom: 0.5rem;
-}
-
-.spectrogram-container {
-  margin-bottom: 1rem;
-  text-align: center;
-  background: white;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.spectrogram-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 audio {
