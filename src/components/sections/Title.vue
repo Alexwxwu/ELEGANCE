@@ -13,7 +13,7 @@ const title = 'ELEGANCE: Efficient LLM Guidance for Audio Visual Target Speech E
 const title_color = '#000000'
 
 // 标题补充，没有则置为''即可
-const title_supp = ' (Vue based)'
+const title_supp = ''
 
 // 标题补充颜色
 const title_supp_color = '#42B883'
@@ -24,22 +24,27 @@ const btn_color = '#444444'
 // 作者清单（包含作者姓名、头像、主页、地址序号）
 const authors = [
   {
-    name: "WenxuanWU",
-    icon: "./icon/junyaohu.jpg",
-    homepage: "https://junyaohu.github.io/",
-    address_flag: "1,#"
+    name: "Wenxuan Wu",
+    homepage: "https://alexwxwu.github.io/",
+    address_flag: "1"
   },
   {
-    name: "Anya Forger",
-    icon: "./icon/anya.jpg",
-    homepage: "https://www.bilibili.com/video/BV1jv4y1P7Bb",
-    address_flag: "2,#"
+    name: "Shuai Wang",
+    homepage: "https://shuaiwang-nju.github.io/",
+    address_flag: "2,"
   },
   {
-    name: "BugCat Capoo",
-    icon: "./icon/capoo.webp",
-    homepage: "https://zh.moegirl.org.cn/%E7%8C%AB%E7%8C%AB%E8%99%AB%E5%92%96%E6%B3%A2",
-    address_flag: "1,*"
+    name: "Xixin Wu",
+    homepage: "https://www1.se.cuhk.edu.hk/~wuxx/",
+    address_flag: "1"
+  },
+	  {
+    name: "Helen Meng",
+    address_flag: "1"
+  },
+	  {
+    name: "Haizhou Li",
+    address_flag: "3"
   },
 ]
 
@@ -47,31 +52,29 @@ const authors = [
 const addresses = [
   {
     address_flag: "1",
-    name: "Home University",
-    icon: "./icon/home.png",
-    homepage: "https://github.com/hmuniversity"
+    name: "CUHK",
   },
   {
     address_flag: "2",
-    name: "IKUN University",
-    icon: "./icon/ikun.avif",
-    homepage: "https://www.bilibili.com/video/BV178411Y7QB"
+    name: "NJU",
+  },
+	{
+    address_flag: "3",
+    name: "CUHK-SZ",
   },
 ]
 
-// 共一和通讯提示
-const con_and_corresponding_author = 
-  "#: Equal Contribution. *: Corresponding Author."
+// // 共一和通讯提示
+// const con_and_corresponding_author = 
+//   "*: Corresponding Author."
 
 // 最新消息
 //const news = "🔥 [2024-12-15] This template project is still under development."
 
 // 强调内容
 const emphases = [
-	"We propose ELEGANCE, a novel framework that incorporates \
-linguistic knowledge from large language models (LLMs) into \
-AV-TSE models through three distinct guidance strategies: output \
-linguistic constraints, intermediate linguistic prediction, and input linguistic prior.",
+	"A novel framework that incorporates 3 different linguistic knowledge from LLMs into \
+AV-TSE models: linguistic constraints, linguistic prediction, and input linguistic prior.",
 	"Comprehensive experiments with RoBERTa, Qwen3-0.6B, and Qwen3-4B on USEV and AV-Mamba.",
 	"Extensive experiments on unseen languages, target speaker switches, increased interfering speakers, and out-of-domain test set"
   // "🎉 [ABCD 2024] Poster",
