@@ -64,17 +64,15 @@ const con_and_corresponding_author =
   "#: Equal Contribution. *: Corresponding Author."
 
 // 最新消息
-const news = "🔥 [2024-12-15] This template project is still under development."
+//const news = "🔥 [2024-12-15] This template project is still under development."
 
 // 强调内容
 const emphases = [
 	"We propose ELEGANCE, a novel framework that incorporates \
 linguistic knowledge from large language models (LLMs) into \
 AV-TSE models through three distinct guidance strategies: output \
-linguistic constraints, intermediate linguistic prediction, and input linguistic prior."
-	
-	"Comprehensive experiments with RoBERTa, Qwen3-0.6B, and Qwen3-4B on USEV and AV-Mamba."
-	
+linguistic constraints, intermediate linguistic prediction, and input linguistic prior.",
+	"Comprehensive experiments with RoBERTa, Qwen3-0.6B, and Qwen3-4B on USEV and AV-Mamba.",
 	"Extensive experiments on unseen languages, target speaker switches, increased interfering speakers, and out-of-domain test set"
   // "🎉 [ABCD 2024] Poster",
   // "🥰 欢迎关注“减论”微信公众号/B站/知乎/小红书",
