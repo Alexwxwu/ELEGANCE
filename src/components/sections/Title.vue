@@ -7,7 +7,7 @@ import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@eleme
 const logo = './logo.png'
 
 // 标题
-const title = 'ELEGANCE-DEMO'
+const title = 'ELEGANCE: Efficient LLM Guidance for Audio Visual Target Speech Extraction'
 
 // 标题颜色
 const title_color = '#000000'
@@ -24,7 +24,7 @@ const btn_color = '#444444'
 // 作者清单（包含作者姓名、头像、主页、地址序号）
 const authors = [
   {
-    name: "Your Name",
+    name: "WenxuanWU",
     icon: "./icon/junyaohu.jpg",
     homepage: "https://junyaohu.github.io/",
     address_flag: "1,#"
@@ -68,10 +68,18 @@ const news = "🔥 [2024-12-15] This template project is still under development
 
 // 强调内容
 const emphases = [
-  "🎉 [ABCD 2024] Poster",
-  "🥰 欢迎关注“减论”微信公众号/B站/知乎/小红书",
-  "传递人工智能算法科普教育的减约理解",
-  "提升信息效率及认知维度"
+	"We propose ELEGANCE, a novel framework that incorporates \
+linguistic knowledge from large language models (LLMs) into \
+AV-TSE models through three distinct guidance strategies: output \
+linguistic constraints, intermediate linguistic prediction, and input linguistic prior."
+	
+	"Comprehensive experiments with RoBERTa, Qwen3-0.6B, and Qwen3-4B on USEV and AV-Mamba."
+	
+	"Extensive experiments on unseen languages, target speaker switches, increased interfering speakers, and out-of-domain test set"
+  // "🎉 [ABCD 2024] Poster",
+  // "🥰 欢迎关注“减论”微信公众号/B站/知乎/小红书",
+  // "传递人工智能算法科普教育的减约理解",
+  // "提升信息效率及认知维度"
 ]
 
 // 提供引导资料链接
@@ -81,45 +89,45 @@ const buttons = [
     name: "Paper",
     component: Document,
   },
-  {
-    disabled: true,
-    name: "中译版",
-    component: Document,
-  },
-  {
-    disabled: false,
-    name: "Code",
-    link: "https://github.com/JunyaoHu/academic-project-page-template-vue",
-    component: Files,
-  },
-  {
-    disabled: false,
-    name: "Demo",
-    link: "https://junyaohu.github.io/academic-project-page-template-vue",
-    component: MagicStick,
-  },
-  {
-    disabled: true,
-    name: "Poster",
-    component: Picture,
-  },
-  {
-    disabled: true,
-    name: "Slide",
-    component: DataAnalysis,
-  },
-  {
-    disabled: false,
-    name: "Video (减论)",
-    link: "https://www.bilibili.com/video/BV15XkgYiE73/",
-    component: Film,
-  },
-  {
-    disabled: false,
-    name: "Video (Tutorial)",
-    link: "https://www.bilibili.com/video/BV1oUrfYzEqZ",
-    component: Film,
-  },
+  // {
+  //   disabled: true,
+  //   name: "中译版",
+  //   component: Document,
+  // },
+  // {
+  //   disabled: false,
+  //   name: "Code",
+  //   link: "https://github.com/JunyaoHu/academic-project-page-template-vue",
+  //   component: Files,
+  // },
+  // {
+  //   disabled: false,
+  //   name: "Demo",
+  //   link: "https://junyaohu.github.io/academic-project-page-template-vue",
+  //   component: MagicStick,
+  // },
+  // {
+  //   disabled: true,
+  //   name: "Poster",
+  //   component: Picture,
+  // },
+  // {
+  //   disabled: true,
+  //   name: "Slide",
+  //   component: DataAnalysis,
+  // },
+  // {
+  //   disabled: false,
+  //   name: "Video (减论)",
+  //   link: "https://www.bilibili.com/video/BV15XkgYiE73/",
+  //   component: Film,
+  // },
+  // {
+  //   disabled: false,
+  //   name: "Video (Tutorial)",
+  //   link: "https://www.bilibili.com/video/BV1oUrfYzEqZ",
+  //   component: Film,
+  // },
 ]
 
 </script>
@@ -127,12 +135,6 @@ const buttons = [
 <template>
   <div>
 
-    <!-- 最新消息提示 -->
-    <el-row justify="center">
-      <el-col :span="24">
-        <el-alert title="🔥 This template is still under development." type="success" />
-      </el-col>
-    </el-row>
 
     <!-- 文章logo -->
     <el-row v-if="logo" justify="center">
