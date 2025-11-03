@@ -62,51 +62,60 @@ export default {
   name: 'AudioPlayer',
   data() {
     return {
-      selectedCategory: 'guidance',
-      selectedAudio: '6339077953587836416_00025_1.048_6338273935710083967_00003_-1.048',
-      audioFiles: [
-        '6339077953587836416_00025_1.048_6338273935710083967_00003_-1.048',
-        '6355861826787125225_00011_0.88796_6360685934053997353_00007_-0.88796',
-        '6365141533126941637_00051_1.5209_6369259547770281088_00021_-1.5209',
-        '6368494184598133861_00017_4.2493_6363654615448994597_00013_-4.2493',
-        '6375480378401815497_00001_2.2431_6368494184598133861_00017_-2.2431',
-        '6382189546814897943_00019_0.74266_6338273935710083967_00003_-0.74266'
-      ],
-      methodsByCategory: {
-        guidance: ['USEV', 'USEV-I-Roberta', 'USEV-M-Roberta', 'USEV-O-Roberta', 'AV-Mamba', 'AV-Mamba-I-Roberta', 'AV-Mamba-M-Roberta', 'AV-Mamba-O-Roberta'],
-        llm: ['USEV', 'USEV-I-Roberta', 'USEV-I-Qwen0.6b', 'USEV-I-Qwen4b'],
-        crosslingual: ['USEV-PT', 'USEV-I-PT', 'USEV-IT', 'USEV-I-IT', 'USEV-ES', 'USEV-I-ES', 'USEV-FR', 'USEV-I-FR']
+      selectedCategory: 'guidance', // 默认选中第一个分类
+      // 每个分类对应的音频文件列表（包含名称和路径）
+      audioFilesByCategory: {
+        guidance: [
+          { name: 'USEV', path: '/ELEGANCE/output_audio/guidance/USEV.wav' },
+          { name: 'USEV-I-Roberta', path: '/ELEGANCE/output_audio/guidance/USEV-I-Roberta.wav' },
+            { name: 'USEV-M-Roberta', path: '/ELEGANCE/output_audio/guidance/USEV-M-Roberta.wav' },
+              { name: 'USEV-O-Roberta', path: '/ELEGANCE/output_audio/guidance/USEV-O-Roberta.wav' },
+          { name: 'AV-Mamba', path: '/ELEGANCE/output_audio/guidance/AV-Mamba.wav' },
+           { name: 'AV-Mamba-I-Roberta', path: '/ELEGANCE/output_audio/guidance/AV-Mamba-I-Roberta.wav' },
+           { name: 'AV-Mamba-M-Roberta', path: '/ELEGANCE/output_audio/guidance/AV-Mamba-M-Roberta.wav' },
+           { name: 'AV-Mamba-O-Roberta', path: '/ELEGANCE/output_audio/guidance/AV-Mamba-O-Roberta.wav' },
+          // 其他guidance类别的音频...
+        ],
+        llm: [
+          { name: 'USEV', path: '/ELEGANCE/output_audio/llm/USEV.wav' },
+          { name: 'USEV-I-Roberta', path: '/ELEGANCE/output_audio/llm/USEV-I-Roberta.wav' },
+          { name: 'USEV-I-Qwen0.6b', path: '/ELEGANCE/output_audio/llm/USEV-I-Qwen0.6b.wav' },
+          { name: 'USEV-I-Qwen4b', path: '/ELEGANCE/output_audio/llm/USEV-I-Qwen4b.wav' },
+          // 其他llm类别的音频...
+        ],
+        crosslingual: [
+          { name: 'USEV-PT', path: '/ELEGANCE/output_audio/crosslingual/USEV-PT.wav' },
+          { name: 'USEV-I-Roberta-PT', path: '/ELEGANCE/output_audio/crosslingual/USEV-I-Roberta-PT.wav' },
+          { name: 'USEV-IT', path: '/ELEGANCE/output_audio/crosslingual/USEV-IT.wav' },
+          { name: 'USEV-I-Roberta-IT', path: '/ELEGANCE/output_audio/crosslingual/USEV-I-Roberta-IT.wav' },
+          { name: 'USEV-ES', path: '/ELEGANCE/output_audio/crosslingual/USEV-ES.wav' },
+          { name: 'USEV-I-Roberta-ES', path: '/ELEGANCE/output_audio/crosslingual/USEV-I-Roberta-ES.wav' },
+          { name: 'USEV-FR', path: '/ELEGANCE/output_audio/crosslingual/USEV-FR.wav' },
+           { name: 'USEV-I-Roberta-FR', path: '/ELEGANCE/output_audio/crosslingual/USEV-I-Roberta-FR.wav' },
+
+          // 其他crosslingual类别的音频...
+        ]
       }
     }
   },
   computed: {
-    currentMethods() {
-      return this.methodsByCategory[this.selectedCategory] || [];
+    // 当前分类对应的音频文件列表
+    currentAudioFiles() {
+      return this.audioFilesByCategory[this.selectedCategory] || [];
     }
   },
   methods: {
-    formatAudioName(filename) {
-      const parts = filename.split('_');
-      return `Audio Sample ${parts[1] || '1'}`;
-    },
-    getAudioPath(method, filename) {
-      return `/ELEGANCE/output_audio/${method}/${filename}.wav`;
-    },
-    onAudioChange() {
+    // 切换分类时重置音频
+    onCategoryChange() {
       const audioElements = this.$el.querySelectorAll('audio');
       audioElements.forEach(audio => {
         audio.pause();
         audio.currentTime = 0;
       });
-    },
-    onCategoryChange() {
-      this.selectedAudio = '';
-      this.onAudioChange();
     }
   }
 }
 </script>
-
 <style scoped>
 .audio-player-section {
   padding: 2rem;
