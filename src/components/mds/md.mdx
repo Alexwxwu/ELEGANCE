@@ -1,53 +1,37 @@
-# Markdown (H1)
-
-The render result of `md.mdx` is here.
-
-## Good (H2)
-
-### Nice (H3)
-
-[**Diffusion models**](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) are a class of generative models in machine learning that have gained significant attention in recent years. 
-
-**Text-to-image diffusion models** have various application scenarios, including:
-
-- **Art & Design**: Used by artists for creative art and fashion designers to generate clothing renderings.
-- **Advertising & Marketing**: Helps in creating advertising posters and product promotion maps.
-- **Game & Film**: Applied in game scene and character design, as well as film and television concept design...
-
-> Thegeneral training steps of diffusion models are as follows:
-
-1. Data collection
-2. Noise addition
-3. Model building
-4. Training
-5. Evaluation
-6. Deployment
+# Overview
 
 
-```
-import torch 
+### ELEGANCE framework
+* Output guidance: AV-TSE with linguistic constraints, where both PLM and PSLM will be utilized during training with an adapter to align the latent semantic space.
+* Intermediate guidance: AV-TSE with linguistic prediction, jointly modeling the AV-TSE task and the acoustic-informed LLM next-token prediction (NTP) task. Empower AV-TSE with linguistic forecasting ability with NTP loss.
+* Input guidance:  AV-TSE with linguistic prior. The LLM guidance and zero embedding will be added as input features in an interleaved way. The goal is to reduce over-reliance of the AV-TSE model on transcripts, which are not available during inference.
 
-def denoise():
-    pass
-```
+ 
+ 
+ 
 
-* [ ] to do
-* [x] done
-* [x] ~114514~
+### Improvements on 2 different AV-TSE backbones: 
+### Performance on 3 zero-shot scenarios: 
+### Effect of LLM type and size
+### Linguistic knowledge Compensation when the primary visual cue is impaired
+### Generalization on Cross-lingual settings
+### Generalization on Cross-lingual settings
 
-![](./logo_vision_aigc.png)
-
-Lift ($$L$$) can be determined by Lift Coefficient ($$C_L$$) like the following
-equation.
-
-$$
-L = \frac{1}{2} \rho v^2 S C_L
-$$
+### USEV vs AV-Mamba
+### Roberta vs Qwen0.6B vs Qwen4B
+### Target switches with impaired visual cue
 
 
-### Table (H3)
 
-| a       | b       | c     |  d      |
-| -       | :-      | -:    | :-:     |
-| Alpha   | Bravo   | Alpha | Bravo   |
-| 中文    | Charlie | 👩‍❤️‍👩    | Delta   |
+
+
+
+
+
+
+
+
+
+
+
+
