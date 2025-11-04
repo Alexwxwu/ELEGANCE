@@ -39,36 +39,36 @@ export default {
       selectedCategory: 'guidance',
       audioFilesByCategory: {
         guidance: [
-          { name: 'Mixture', path:`/output_audio/guidance/mix.wav` },
-          { name: 'GT', path:'/output_audio/guidance/tgt.wav' },
-          { name: 'USEV', path:'/ELEGANCE/public/output_audio/guidance/usev.wav' },
-          { name: 'USEV-I-Roberta', path:'/ELEGANCE/public/output_audio/guidance/usev-i.wav' },
-          { name: 'USEV-M-Roberta', path:'/ELEGANCE/public/output_audio/guidance/usev-m.wav' },
-          { name: 'USEV-O-Roberta', path:'/ELEGANCE/public/output_audio/guidance/usev-o.wav' },
-          { name: 'AV-Mamba', path: '/ELEGANCE/public/output_audio/guidance/avmamba.wav' },
-          { name: 'AV-Mamba-I-Roberta', path:'/ELEGANCE/public/output_audio/guidance/avmamba-i.wav' },
-          { name: 'AV-Mamba-M-Roberta', path:'/ELEGANCE/public/output_audio/guidance/avmamba-m.wav' },
-          { name: 'AV-Mamba-O-Roberta', path:'/ELEGANCE/public/output_audio/guidance/avmamba-o.wav' }
+          { name: 'Mixture', path: '/output_audio/guidance/mix.wav' },
+          { name: 'GT', path: '/output_audio/guidance/tgt.wav' },
+          { name: 'USEV', path: '/output_audio/guidance/usev.wav' },
+          { name: 'USEV-I-Roberta', path: '/output_audio/guidance/usev-i.wav' },
+          { name: 'USEV-M-Roberta', path: '/output_audio/guidance/usev-m.wav' },
+          { name: 'USEV-O-Roberta', path: '/output_audio/guidance/usev-o.wav' },
+          { name: 'AV-Mamba', path: '/output_audio/guidance/avmamba.wav' },
+          { name: 'AV-Mamba-I-Roberta', path: '/output_audio/guidance/avmamba-i.wav' },
+          { name: 'AV-Mamba-M-Roberta', path: '/output_audio/guidance/avmamba-m.wav' },
+          { name: 'AV-Mamba-O-Roberta', path: '/output_audio/guidance/avmamba-o.wav' }
         ],
         llm: [
-          { name: 'USEV(sample1)', path:'/ELEGANCE/public/output_audio/llm/sample1/USEV.wav' },
-          { name: 'USEV-I-Roberta(sample1)', path:'/ELEGANCE/public/output_audio/llm/sample1/USEV-I-Roberta.wav' },
-          { name: 'USEV-I-Qwen0.6b(sample1)', path:'/ELEGANCE/public/output_audio/llm/sample1/USEV-I-qwen06b.wav' },
-          { name: 'USEV-I-Qwen4b(sample1)', path:'/ELEGANCE/public/output_audio/llm/sample1/USEV-I-qwen4b.wav' },
-          { name: 'USEV(sample2)', path:'/ELEGANCE/public/output_audio/llm/sample2/USEV.wav' },
-          { name: 'USEV-I-Roberta(sample2)', path:'/ELEGANCE/public/output_audio/llm/sample2/USEV-I-Roberta.wav' },
-          { name: 'USEV-I-Qwen0.6b(sample2)', path:'/ELEGANCE/public/output_audio/llm/sample2/USEV-I-qwen06b.wav' },
-          { name: 'USEV-I-Qwen4b(sample2)', path:'/ELEGANCE/public/output_audio/llm/sample2/USEV-I-qwen4b.wav' }
+          { name: 'USEV(sample1)', path: '/output_audio/llm/sample1/USEV.wav' },
+          { name: 'USEV-I-Roberta(sample1)', path: '/output_audio/llm/sample1/USEV-I-Roberta.wav' },
+          { name: 'USEV-I-Qwen0.6b(sample1)', path: '/output_audio/llm/sample1/USEV-I-qwen06b.wav' },
+          { name: 'USEV-I-Qwen4b(sample1)', path: '/output_audio/llm/sample1/USEV-I-qwen4b.wav' },
+          { name: 'USEV(sample2)', path: '/output_audio/llm/sample2/USEV.wav' },
+          { name: 'USEV-I-Roberta(sample2)', path: '/output_audio/llm/sample2/USEV-I-Roberta.wav' },
+          { name: 'USEV-I-Qwen0.6b(sample2)', path: '/output_audio/llm/sample2/USEV-I-qwen06b.wav' },
+          { name: 'USEV-I-Qwen4b(sample2)', path: '/output_audio/llm/sample2/USEV-I-qwen4b.wav' }
         ],
         crosslingual: [
-          { name: 'USEV-PT', path:'/ELEGANCE/public/output_audio/crosslingual/USEV-PT.wav' },
-          { name: 'USEV-I-Roberta-PT', path:'/ELEGANCE/public/output_audio/crosslingual/USEV-I-PT.wav' },
-          { name: 'USEV-IT', path:'/ELEGANCE/public/output_audio/crosslingual/USEV-IT.wav' },
-          { name: 'USEV-I-Roberta-IT', path:'/ELEGANCE/public/output_audio/crosslingual/USEV-I-IT.wav' },
-          { name: 'USEV-ES', path:'/ELEGANCE/public/output_audio/crosslingual/USEV-ES.wav' },
-          { name: 'USEV-I-Roberta-ES', path:'/ELEGANCE/public/output_audio/crosslingual/USEV-I-ES.wav' },
-          { name: 'USEV-FR', path:'/ELEGANCE/public/output_audio/crosslingual/USEV-FR.wav' },
-          { name: 'USEV-I-Roberta-FR', path:'/ELEGANCE/public/output_audio/crosslingual/USEV-I-FR.wav' }
+          { name: 'USEV-PT', path: '/output_audio/crosslingual/USEV-PT.wav' },
+          { name: 'USEV-I-Roberta-PT', path: '/output_audio/crosslingual/USEV-I-PT.wav' },
+          { name: 'USEV-IT', path: '/output_audio/crosslingual/USEV-IT.wav' },
+          { name: 'USEV-I-Roberta-IT', path: '/output_audio/crosslingual/USEV-I-IT.wav' },
+          { name: 'USEV-ES', path: '/output_audio/crosslingual/USEV-ES.wav' },
+          { name: 'USEV-I-Roberta-ES', path: '/output_audio/crosslingual/USEV-I-ES.wav' },
+          { name: 'USEV-FR', path: '/output_audio/crosslingual/USEV-FR.wav' },
+          { name: 'USEV-I-Roberta-FR', path: '/output_audio/crosslingual/USEV-I-FR.wav' }
         ]
       }
     }
@@ -79,16 +79,34 @@ export default {
     }
   },
   methods: {
+    getFullAudioPath(relativePath) {
+      // 方案1：基础路径处理（适用于GitHub Pages）
+      return `/ELEGANCE${relativePath}`;
+      
+      // 方案2：动态环境适配（推荐）
+      // return `${process.env.BASE_URL || ''}${relativePath}`;
+      
+      // 方案3：使用CDN（如果GitHub Pages仍有问题）
+      // return `https://cdn.jsdelivr.net/gh/Alexwxwu/ELEGANCE@main/public${relativePath}`;
+    },
     onCategoryChange() {
       const audioElements = this.$el.querySelectorAll('audio');
       audioElements.forEach(audio => {
         audio.pause();
         audio.currentTime = 0;
       });
+    },
+    handleAudioError(event) {
+      console.error('音频加载失败:', {
+        src: event.target.src,
+        error: event.target.error
+      });
+      // 可以在这里添加用户提示
     }
   }
 }
 </script>
+
 
 <style scoped>
 .audio-player-section {
