@@ -2,7 +2,7 @@
   <div>
     <el-divider />
     <div class="audio-player-section">
-      <h2 class="section-title">Audio Separation Results</h2>
+      <h2 class="section-title">Extraction Results</h2>
 
       <!-- 音频类别选择器 -->
       <div class="audio-selector">
@@ -38,7 +38,7 @@ export default {
       selectedCategory: 'guidance',
       audioFilesByCategory: {
         guidance: [
-          { name: 'Mixture', path:'/ELEGANCE/public/output_audio/guidance/tgt.wav' },
+          { name: 'Mixture', path:`/ELEGANCE/public/output_audio/guidance/tgt.wav` },
           { name: 'GT', path:'/ELEGANCE/public/output_audio/guidance/mix.wav' },
           { name: 'USEV', path:'/ELEGANCE/public/output_audio/guidance/usev.wav' },
           { name: 'USEV-I-Roberta', path:'/ELEGANCE/public/output_audio/guidance/usev-i.wav' },
