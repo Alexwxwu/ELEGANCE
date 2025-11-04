@@ -21,6 +21,7 @@
           <div v-for="audio in currentAudioFiles" :key="audio.name" class="audio-item">
             <h3>{{ audio.name }}</h3>
             <audio controls :src="audio.path">
+              console.log("audioaudioaudioaudioaudiopath: ","audio.path")
               Your browser does not support audio playback.
             </audio>
           </div>
