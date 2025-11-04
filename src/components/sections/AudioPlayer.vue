@@ -80,8 +80,9 @@ export default {
   },
   methods: {
     getFullAudioPath(relativePath) {
+      return `https://cdn.jsdelivr.net/gh/Alexwxwu/ELEGANCE@main/public${relativePath}`;
       // 方案1：基础路径处理（适用于GitHub Pages）
-      return `/ELEGANCE${relativePath}`;
+      // return `/ELEGANCE${relativePath}`;
       
       // 方案2：动态环境适配（推荐）
       // return `${process.env.BASE_URL || ''}${relativePath}`;
