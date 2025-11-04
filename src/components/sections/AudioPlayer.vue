@@ -1,85 +1,103 @@
-<script setup>
+ <script setup>
 import { ref } from 'vue'
 
-const selectedDemo = ref('demo1') // 默认选择demo1
+const selectedCategory = ref('guidance')
 </script>
 
 <template>
   <div>
     <el-divider />
-    
+
     <el-row justify="center">
-      <h1 class="section-title">Audio Separation Results</h1>
+      <h1 class="section-title">Audio Samples</h1>
     </el-row>
-    
-    <!-- Demo选择器 -->
-    <el-row justify="center" class="demo-selector">
-      <el-radio-group v-model="selectedDemo">
-        <el-radio-button label="demo1">Demo 1</el-radio-button>
-        <el-radio-button label="demo2">Demo 2</el-radio-button>
-        <el-radio-button label="demo3">Demo 3</el-radio-button>
+
+    <!-- 类别选择器 -->
+    <el-row justify="center" class="category-selector">
+      <el-radio-group v-model="selectedCategory">
+        <el-radio-button label="guidance">Guidance Strategies</el-radio-button>
+        <el-radio-button label="llm">LLM Type & Size</el-radio-button>
+        <el-radio-button label="crosslingual">Cross-lingual</el-radio-button>
       </el-radio-group>
     </el-row>
 
-    <!-- Demo 1 内容 -->
-    <div v-show="selectedDemo === 'demo1'">
+    <!-- Guidance Strategies -->
+    <div v-show="selectedCategory === 'guidance'">
+      <el-row justify="center">
+        <h2 class="category-title">1. Different Guidance Strategies</h2>
+      </el-row>
+
       <el-row justify="center">
         <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10">
           <div class="audio-item">
             <h3 class="audio-title">Mixture</h3>
-            <audio controls class="small-audio">
+            <audio controls>
               <source src="/output_audio/guidance/mix.wav" type="audio/wav">
             </audio>
           </div>
           
           <div class="audio-item">
             <h3 class="audio-title">GT</h3>
-            <audio controls class="small-audio">
+            <audio controls>
               <source src="/output_audio/guidance/tgt.wav" type="audio/wav">
             </audio>
           </div>
+
+          <!-- 其他guidance音频... -->
         </el-col>
       </el-row>
     </div>
 
-    <!-- Demo 2 内容 -->
-    <div v-show="selectedDemo === 'demo2'">
+    <!-- LLM Type & Size -->
+    <div v-show="selectedCategory === 'llm'">
+      <el-row justify="center">
+        <h2 class="category-title">2. Different LLM Type & Size</h2>
+      </el-row>
+
       <el-row justify="center">
         <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10">
           <div class="audio-item">
-            <h3 class="audio-title">USEV</h3>
-            <audio controls class="small-audio">
-              <source src="/output_audio/guidance/usev.wav" type="audio/wav">
+            <h3 class="audio-title">USEV (sample1)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample1/USEV.wav" type="audio/wav">
             </audio>
           </div>
-          
+
           <div class="audio-item">
-            <h3 class="audio-title">USEV-I-Roberta</h3>
-            <audio controls class="small-audio">
-              <source src="/output_audio/guidance/usev-i.wav" type="audio/wav">
+            <h3 class="audio-title">USEV-I-Roberta (sample1)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample1/USEV-I-Roberta.wav" type="audio/wav">
             </audio>
           </div>
+
+          <!-- 其他llm音频... -->
         </el-col>
       </el-row>
     </div>
 
-    <!-- Demo 3 内容 -->
-    <div v-show="selectedDemo === 'demo3'">
+    <!-- Cross-lingual Evaluation -->
+    <div v-show="selectedCategory === 'crosslingual'">
+      <el-row justify="center">
+        <h2 class="category-title">3. Cross-lingual Evaluation</h2>
+      </el-row>
+
       <el-row justify="center">
         <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10">
           <div class="audio-item">
-            <h3 class="audio-title">AV-Mamba</h3>
-            <audio controls class="small-audio">
-              <source src="/output_audio/guidance/avmamba.wav" type="audio/wav">
+            <h3 class="audio-title">USEV-PT</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/USEV-PT.wav" type="audio/wav">
             </audio>
           </div>
-          
+
           <div class="audio-item">
-            <h3 class="audio-title">AV-Mamba-I-Roberta</h3>
-            <audio controls class="small-audio">
-              <source src="/output_audio/guidance/avmamba-i.wav" type="audio/wav">
+            <h3 class="audio-title">USEV-I-PT</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/USEV-I-PT.wav" type="audio/wav">
             </audio>
           </div>
+
+          <!-- 其他crosslingual音频... -->
         </el-col>
       </el-row>
     </div>
@@ -95,50 +113,54 @@ const selectedDemo = ref('demo1') // 默认选择demo1
   font-weight: bold;
 }
 
-.demo-selector {
-  margin: 1.5rem 0;
+.category-selector {
+  margin: 2rem 0;
+}
+
+.category-title {
+  text-align: center;
+  color: #409eff;
+  margin: 2rem 0 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .audio-item {
   background-color: #f8f9fa;
-  border-radius: 8px;
-  padding: 1rem;
-  margin: 10px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.audio-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .audio-title {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 1rem 0;
   color: #333;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
-/* 缩小音频控制条 */
-.small-audio {
+audio {
   width: 100%;
-  height: 40px; /* 控制高度 */
-  transform: scale(0.9); /* 整体缩放 */
-  transform-origin: left center;
-}
-
-/* 更紧凑的布局 */
-.audio-item {
-  padding: 0.8rem;
 }
 
 @media (max-width: 768px) {
+  .audio-item {
+    padding: 1rem;
+  }
+  
+  .category-title {
+    font-size: 1.3rem;
+  }
+  
   .section-title {
-    font-size: 1.5rem;
-  }
-  
-  .audio-title {
-    font-size: 1rem;
-  }
-  
-  .small-audio {
-    height: 36px;
-    transform: scale(0.85);
+    font-size: 1.8rem;
   }
 }
 </style>
