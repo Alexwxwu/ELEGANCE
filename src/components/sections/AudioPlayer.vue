@@ -53,8 +53,7 @@ export default {
           { name: 'USEV(sample1)', path: '/ELEGANCE/output_audio/llm/sample1/USEV.wav' },
           { name: 'USEV-I-Roberta(sample1)', path: '/ELEGANCE/output_audio/llm/sample1/USEV-I-Roberta.wav' },
           { name: 'USEV-I-Qwen0.6b(sample1)', path: '/ELEGANCE/output_audio/llm/sample1/USEV-I-qwen06b.wav' },
-          { name: 'USEV-I-Qwen4b(sample1)', path: '/ELEGANCE/output_audio/llm/sample1/USEV-I-qwen4b.wav' }
-          
+          { name: 'USEV-I-Qwen4b(sample1)', path: '/ELEGANCE/output_audio/llm/sample1/USEV-I-qwen4b.wav' },
           { name: 'USEV(sample2)', path: '/ELEGANCE/output_audio/llm/sample2/USEV.wav' },
           { name: 'USEV-I-Roberta(sample2)', path: '/ELEGANCE/output_audio/llm/sample2/USEV-I-Roberta.wav' },
           { name: 'USEV-I-Qwen0.6b(sample2)', path: '/ELEGANCE/output_audio/llm/sample2/USEV-I-qwen06b.wav' },
