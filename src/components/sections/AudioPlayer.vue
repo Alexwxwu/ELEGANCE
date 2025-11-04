@@ -19,21 +19,21 @@
         <div class="audio-item">
           <h3 class="audio-title">Mixture</h3>
           <audio controls>
-            <source src="/ELEGANCE/output_audio/guidance/mix.wav" type="audio/wav">
+            <source src="/output_audio/guidance/mix.wav" type="audio/wav">
           </audio>
         </div>
         
         <div class="audio-item">
           <h3 class="audio-title">GT</h3>
           <audio controls>
-            <source src="/ELEGANCE/output_audio/guidance/tgt.wav" type="audio/wav">
+            <source src="/output_audio/guidance/tgt.wav" type="audio/wav">
           </audio>
         </div>
 
         <div class="audio-item">
           <h3 class="audio-title">USEV</h3>
           <audio controls>
-            <source src="/ELEGANCE/output_audio/guidance/usev.wav" type="audio/wav">
+            <source src="/output_audio/guidance/usev.wav" type="audio/wav">
           </audio>
         </div>
 
@@ -53,14 +53,14 @@
         <div class="audio-item">
           <h3 class="audio-title">USEV (sample1)</h3>
           <audio controls>
-            <source src="/ELEGANCE/output_audio/llm/sample1/USEV.wav" type="audio/wav">
+            <source src="/output_audio/llm/sample1/USEV.wav" type="audio/wav">
           </audio>
         </div>
 
         <div class="audio-item">
           <h3 class="audio-title">USEV-I-Roberta (sample1)</h3>
           <audio controls>
-            <source src="/ELEGANCE/output_audio/llm/sample1/USEV-I-Roberta.wav" type="audio/wav">
+            <source src="/output_audio/llm/sample1/USEV-I-Roberta.wav" type="audio/wav">
           </audio>
         </div>
 
@@ -80,14 +80,14 @@
         <div class="audio-item">
           <h3 class="audio-title">USEV-PT</h3>
           <audio controls>
-            <source src="/ELEGANCE/output_audio/crosslingual/USEV-PT.wav" type="audio/wav">
+            <source src="/output_audio/crosslingual/USEV-PT.wav" type="audio/wav">
           </audio>
         </div>
 
         <div class="audio-item">
           <h3 class="audio-title">USEV-I-PT</h3>
           <audio controls>
-            <source src="/ELEGANCE/output_audio/crosslingual/USEV-I-PT.wav" type="audio/wav">
+            <source src="/output_audio/crosslingual/USEV-I-PT.wav" type="audio/wav">
           </audio>
         </div>
 
