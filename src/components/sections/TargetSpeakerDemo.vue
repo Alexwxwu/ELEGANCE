@@ -14,7 +14,7 @@
           <video 
             controls 
             width="100%"
-            :src="getMediaPath('output_video/usev-switch/usev-est.mp4')"
+            :src="getMediaPath('ELEGNACE/public/output_video/usev-switch/usev-est.mp4')"
             type="video/mp4"
             @error="handleMediaError"
           >
@@ -29,7 +29,7 @@
           <video 
             controls 
             width="100%"
-            :src="getMediaPath('output_video/usev-switch/usev-m-est.mp4')"
+            :src="getMediaPath('ELEGNACE/public/output_video/usev-switch/usev-m-est.mp4')"
             type="video/mp4"
           >
             Your browser does not support the video tag.
@@ -40,7 +40,7 @@
       <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
         <div class="media-item">
           <h3>Mixture</h3>
-          <audio controls :src="getMediaPath('output_video/usev-switch/mix.wav')">
+          <audio controls :src="getMediaPath('ELEGNACE/public/output_video/usev-switch/mix.wav')">
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -49,7 +49,7 @@
       <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
         <div class="media-item">
           <h3>GT</h3>
-          <audio controls :src="getMediaPath('output_video/usev-switch/tgt.wav')">
+          <audio controls :src="getMediaPath('ELEGNACE/public/output_video/usev-switch/tgt.wav')">
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -61,7 +61,7 @@
           <video 
             controls 
             width="100%"
-            :src="getMediaPath('output_video/avmamba-switch/avmamba-est.mp4')"
+            :src="getMediaPath('ELEGNACE/public/output_video/avmamba-switch/avmamba-est.mp4')"
             type="video/mp4"
           >
             Your browser does not support the video tag.
@@ -75,7 +75,7 @@
           <video 
             controls 
             width="100%"
-            :src="getMediaPath('output_video/avmamba-switch/avmamba-i-est.mp4')"
+            :src="getMediaPath('ELEGNACE/public/output_video/avmamba-switch/avmamba-i-est.mp4')"
             type="video/mp4"
           >
             Your browser does not support the video tag.
@@ -86,7 +86,7 @@
       <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
         <div class="media-item">
           <h3>Mixture</h3>
-          <audio controls :src="getMediaPath('output_audio/avmamba-switch/mix.wav')">
+          <audio controls :src="getMediaPath('ELEGNACE/public/output_audio/avmamba-switch/mix.wav')">
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -95,7 +95,7 @@
       <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
         <div class="media-item">
           <h3>GT</h3>
-          <audio controls :src="getMediaPath('output_audio/avmamba-switch/tgt.wav')">
+          <audio controls :src="getMediaPath('ELEGNACE/public/output_audio/avmamba-switch/tgt.wav')">
             Your browser does not support the audio element.
           </audio>
         </div>
