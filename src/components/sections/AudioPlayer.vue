@@ -39,8 +39,8 @@ export default {
       selectedCategory: 'guidance',
       audioFilesByCategory: {
         guidance: [
-          { name: 'Mixture', path:`/ELEGANCE/public/output_audio/guidance/tgt.wav` },
-          { name: 'GT', path:'/ELEGANCE/public/output_audio/guidance/mix.wav' },
+          { name: 'Mixture', path:`/output_audio/guidance/mix.wav` },
+          { name: 'GT', path:'/output_audio/guidance/tgt.wav' },
           { name: 'USEV', path:'/ELEGANCE/public/output_audio/guidance/usev.wav' },
           { name: 'USEV-I-Roberta', path:'/ELEGANCE/public/output_audio/guidance/usev-i.wav' },
           { name: 'USEV-M-Roberta', path:'/ELEGANCE/public/output_audio/guidance/usev-m.wav' },
