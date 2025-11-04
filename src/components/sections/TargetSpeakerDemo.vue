@@ -12,7 +12,7 @@
         <div class="media-item">
           <h3>USEV</h3>
           <video controls width="100%">
-            <source src="/output_video/usev-switch/usev-est.mp4" type="video/mp4">
+            <source src="output_video/usev-switch/usev-est.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -22,7 +22,7 @@
         <div class="media-item">
           <h3>USEV-M-Roberta</h3>
           <video controls width="100%">
-            <source src="/output_video/usev-switch/usev-m-est.mp4" type="video/mp4">
+            <source src="output_video/usev-switch/usev-m-est.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -35,7 +35,7 @@
         <div class="media-item">
           <h3>Mixture</h3>
           <audio controls>
-            <source src="/output_video/usev-switch/mix.wav" type="audio/wav">
+            <source src="output_video/usev-switch/mix.wav" type="audio/wav">
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -45,7 +45,7 @@
         <div class="media-item">
           <h3>GT</h3>
           <audio controls>
-             <source src="/output_video/usev-switch/tgt.wav" type="audio/wav">
+             <source src="output_video/usev-switch/tgt.wav" type="audio/wav">
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -56,7 +56,7 @@
         <div class="media-item">
           <h3>AV-Mamba</h3>
           <video controls width="100%">
-            <source src="/output_video/avmamba-switch/avmamba-est.mp4" type="video/mp4">
+            <source src="output_video/avmamba-switch/avmamba-est.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -66,7 +66,7 @@
         <div class="media-item">
           <h3>AV-Mamba-I-Roberta</h3>
           <video controls width="100%">
-            <source src="/output_video/avmamba-switch/avmamba-i-est.mp4" type="video/mp4">
+            <source src="output_video/avmamba-switch/avmamba-i-est.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -78,7 +78,7 @@
         <div class="media-item">
           <h3>Mixture</h3>
           <audio controls>
-            <source src="/ELEGANCE/output_audio/avmamba-switch/mix.wav" type="audio/wav">
+            <source src="output_audio/avmamba-switch/mix.wav" type="audio/wav">
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -88,7 +88,7 @@
         <div class="media-item">
           <h3>GT</h3>
           <audio controls>
-            <source src="/ELEGANCE/output_audio/avmamba-switch/tgt.wav" type="audio/wav">
+            <source src="output_audio/avmamba-switch/tgt.wav" type="audio/wav">
             Your browser does not support the audio element.
           </audio>
         </div>
