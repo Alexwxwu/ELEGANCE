@@ -19,7 +19,7 @@
             <h3>mix</h3>  <!-- 添加标题 -->
           </div>
           <audio controls muted preload playsinline>
-            <source src="/output_audio/guidance/mix.wav'">
+            <source src="/output_audio/guidance/mix.wav">
           </audio>
         </el-container>
  
