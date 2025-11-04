@@ -12,7 +12,7 @@
         <div class="media-item">
           <h3>USEV</h3>
           <video controls width="100%">
-            <source src="public/output_video/usev-switch/usev-est.mp4" type="video/mp4">
+            <source src="output_video/usev-switch/usev-est.mp4" type="video/mp4">
             
             Your browser does not support the video tag.
           </video>
