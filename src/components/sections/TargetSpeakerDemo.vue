@@ -10,9 +10,9 @@
     <el-row justify="center" class="video-row">
       <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
         <div class="media-item">
-          <h3>USEV Switch</h3>
+          <h3>USEV</h3>
           <video controls width="100%">
-            <source src="/ELEGANCE/output_video/usev-switch.mp4" type="video/mp4">
+            <source src="/output_video/usev-switch/usev-est.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -20,9 +20,43 @@
       
       <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
         <div class="media-item">
-          <h3>USEV LLM Switch</h3>
+          <h3>USEV-M-Roberta</h3>
           <video controls width="100%">
-            <source src="/ELEGANCE/output_video/usev-llm-switch.mp4" type="video/mp4">
+            <source src="/output_video/usev-switch/usev-m-est.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </el-col>
+      
+       
+    <!-- 音频展示部分 -->
+    <el-row justify="center" class="audio-row">
+      <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+        <div class="media-item">
+          <h3>Mixture</h3>
+          <audio controls>
+            <source src="/output_video/usev-switch/mix.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </el-col>
+      
+      <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+        <div class="media-item">
+          <h3>GT</h3>
+          <audio controls>
+             <source src="/output_video/usev-switch/tgt.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </el-col>
+
+      <!-- 视频展示部分 -->
+      <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+        <div class="media-item">
+          <h3>AV-Mamba</h3>
+          <video controls width="100%">
+            <source src="/output_video/avmamba-switch/avmamba-est.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -30,32 +64,21 @@
       
       <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
         <div class="media-item">
-          <h3>AVMamba Switch</h3>
+          <h3>AV-Mamba-I-Roberta</h3>
           <video controls width="100%">
-            <source src="/ELEGANCE/output_video/avmamba-switch.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </el-col>
-      
-      <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
-        <div class="media-item">
-          <h3>AVMamba LLM Switch</h3>
-          <video controls width="100%">
-            <source src="/ELEGANCE/output_video/avmamba-llm-switch.mp4" type="video/mp4">
+            <source src="/output_video/avmamba-switch/avmamba-i-est.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
       </el-col>
     </el-row>
     
-    <!-- 音频展示部分 -->
-    <el-row justify="center" class="audio-row">
+      <!-- 音频展示部分 -->
       <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
         <div class="media-item">
-          <h3>USEV Mix</h3>
+          <h3>Mixture</h3>
           <audio controls>
-            <source src="/ELEGANCE/output_audio/usev-mix.wav" type="audio/wav">
+            <source src="/ELEGANCE/output_audio/avmamba-switch/mix.wav" type="audio/wav">
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -63,29 +86,9 @@
       
       <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
         <div class="media-item">
-          <h3>USEV GT</h3>
+          <h3>GT</h3>
           <audio controls>
-            <source src="/ELEGANCE/output_audio/usev-gt.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-      </el-col>
-      
-      <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
-        <div class="media-item">
-          <h3>AVMamba Mix</h3>
-          <audio controls>
-            <source src="/ELEGANCE/output_audio/avmamba-mix.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-      </el-col>
-      
-      <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
-        <div class="media-item">
-          <h3>AVMamba GT</h3>
-          <audio controls>
-            <source src="/ELEGANCE/output_audio/avmamba-gt.wav" type="audio/wav">
+            <source src="/ELEGANCE/output_audio/avmamba-switch/tgt.wav" type="audio/wav">
             Your browser does not support the audio element.
           </audio>
         </div>
