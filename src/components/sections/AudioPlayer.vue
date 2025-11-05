@@ -42,8 +42,57 @@ const selectedCategory = ref('guidance')
               <source src="/output_audio/guidance/tgt.wav" type="audio/wav">
             </audio>
           </div>
+         <div class="audio-item">
+            <h3 class="audio-title">USEV</h3>
+            <audio controls>
+              <source src="/output_audio/guidance/usev.wav" type="audio/wav">
+            </audio>
+          </div>
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-I-Roberta</h3>
+            <audio controls>
+              <source src="/output_audio/guidance/usev-i.wav" type="audio/wav">
+            </audio>
+          </div>
+         <div class="audio-item">
+            <h3 class="audio-title">USEV-M-Roberta</h3>
+            <audio controls>
+              <source src="/output_audio/guidance/usev-m.wav" type="audio/wav">
+            </audio>
+          </div>
 
-          <!-- 其他guidance音频... -->
+         <div class="audio-item">
+            <h3 class="audio-title">USEV-O-Roberta</h3>
+            <audio controls>
+              <source src="/output_audio/guidance/usev-o.wav" type="audio/wav">
+            </audio>
+          </div>
+         
+         <div class="audio-item">
+            <h3 class="audio-title">AV-Mamba</h3>
+            <audio controls>
+              <source src="/output_audio/guidance/avmamba.wav" type="audio/wav">
+            </audio>
+          </div>
+         <div class="audio-item">
+            <h3 class="audio-title">AV-Mamba-I-Roberta</h3>
+            <audio controls>
+              <source src="/output_audio/guidance/avmamba-i.wav" type="audio/wav">
+            </audio>
+          </div>
+         <div class="audio-item">
+            <h3 class="audio-title">AV-Mamba-M-Roberta</h3>
+            <audio controls>
+              <source src="/output_audio/guidance/avmamba-m.wav" type="audio/wav">
+            </audio>
+          </div>
+          <div class="audio-item">
+            <h3 class="audio-title">AV-Mamba-O-Roberta</h3>
+            <audio controls>
+              <source src="/output_audio/guidance/avmamba-o.wav" type="audio/wav">
+            </audio>
+          </div>
+         
         </el-col>
       </el-row>
     </div>
@@ -69,6 +118,49 @@ const selectedCategory = ref('guidance')
               <source src="/output_audio/llm/sample1/USEV-I-Roberta.wav" type="audio/wav">
             </audio>
           </div>
+         
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-I-Qwen0.6b (sample1)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample1/USEV-I-qwen06b.wav" type="audio/wav">
+            </audio>
+          </div>
+         
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-I-Qwen4b (sample1)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample1/USEV-I-qwen4b.wav" type="audio/wav">
+            </audio>
+          </div>
+
+         <div class="audio-item">
+            <h3 class="audio-title">USEV (sample2)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample2/USEV.wav" type="audio/wav">
+            </audio>
+          </div>
+
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-I-Roberta (sample2)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample2/USEV-I-Roberta.wav" type="audio/wav">
+            </audio>
+          </div>
+         
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-I-Qwen0.6b (sample2)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample2/USEV-I-qwen06b.wav" type="audio/wav">
+            </audio>
+          </div>
+         
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-I-Qwen4b (sample2)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample2/USEV-I-qwen4b.wav" type="audio/wav">
+            </audio>
+          </div>
+
 
           <!-- 其他llm音频... -->
         </el-col>
