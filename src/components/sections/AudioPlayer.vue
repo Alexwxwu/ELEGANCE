@@ -191,14 +191,14 @@ const selectedCategory = ref('guidance')
            <div class="audio-item">
             <h3 class="audio-title">FR-Mixture</h3>
             <audio controls>
-              <source src="/output_audio/crosslingual/FR-mix.wav" type="audio/wav">
+              <source src="/output_audio/crosslingual/FR_mix.wav" type="audio/wav">
             </audio>
           </div>
 
          <div class="audio-item">
             <h3 class="audio-title">FR-GT</h3>
             <audio controls>
-              <source src="/output_audio/crosslingual/FR-tgt.wav" type="audio/wav">
+              <source src="/output_audio/crosslingual/FR_tgt.wav" type="audio/wav">
             </audio>
           </div>
 
@@ -219,14 +219,14 @@ const selectedCategory = ref('guidance')
            <div class="audio-item">
             <h3 class="audio-title">PT-Mixture</h3>
             <audio controls>
-              <source src="/output_audio/crosslingual/PT-mix.wav" type="audio/wav">
+              <source src="/output_audio/crosslingual/PT_mix.wav" type="audio/wav">
             </audio>
           </div>
 
          <div class="audio-item">
             <h3 class="audio-title">PT-GT</h3>
             <audio controls>
-              <source src="/output_audio/crosslingual/PT-tgt.wav" type="audio/wav">
+              <source src="/output_audio/crosslingual/PT_tgt.wav" type="audio/wav">
             </audio>
           </div>
 
@@ -248,14 +248,14 @@ const selectedCategory = ref('guidance')
            <div class="audio-item">
             <h3 class="audio-title">IT-Mixture</h3>
             <audio controls>
-              <source src="/output_audio/crosslingual/IT-mix.wav" type="audio/wav">
+              <source src="/output_audio/crosslingual/IT_mix.wav" type="audio/wav">
             </audio>
           </div>
 
          <div class="audio-item">
             <h3 class="audio-title">IT-GT</h3>
             <audio controls>
-              <source src="/output_audio/crosslingual/IT-tgt.wav" type="audio/wav">
+              <source src="/output_audio/crosslingual/IT_tgt.wav" type="audio/wav">
             </audio>
           </div>
 
@@ -277,14 +277,14 @@ const selectedCategory = ref('guidance')
            <div class="audio-item">
             <h3 class="audio-title">ES-Mixture</h3>
             <audio controls>
-              <source src="/output_audio/crosslingual/ES-mix.wav" type="audio/wav">
+              <source src="/output_audio/crosslingual/ES_mix.wav" type="audio/wav">
             </audio>
           </div>
 
          <div class="audio-item">
             <h3 class="audio-title">ES-GT</h3>
             <audio controls>
-              <source src="/output_audio/crosslingual/ES-tgt.wav" type="audio/wav">
+              <source src="/output_audio/crosslingual/ES_tgt.wav" type="audio/wav">
             </audio>
           </div>
 
