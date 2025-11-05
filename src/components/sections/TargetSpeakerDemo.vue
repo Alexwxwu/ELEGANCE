@@ -12,7 +12,6 @@
     <!-- 每个网站的视频的iframe可能不一致，最好在这里手动调整 -->
     <el-row justify="center">
       <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10" >
-            <h2 class="section-subtitle">USEV on switch </h2>
 
         <!-- local -->
         <el-container class="video-container">
@@ -43,7 +42,7 @@
           </audio>
         </el-container>
 
-    <h2 class="section-subtitle">AV-Mamba on switch </h2>
+
          <!-- local -->
         <el-container class="video-container">
             <div class="audio-title">AV-Mamba</div>
@@ -74,8 +73,6 @@
         </el-container>
          
          
-        
-         
       </el-col>
     </el-row>
   </div>
@@ -93,12 +90,12 @@
 /* 保持视频/音频的样式不变 */
 iframe, video, audio {
   aspect-ratio: 16/9;
-  width: 70%;
+  width: 80%;
 }
 
 /* 确保标题在上方且样式良好 */
 .audio-title {
-  margin-bottom: 10px; /* 标题与视频/音频之间的距离 */
+  margin-bottom: 5px; /* 标题与视频/音频之间的距离 */
   font-weight: bold;   /* 可选：加粗 */
   font-size: 16px;     /* 可选：字体大小 */
   text-align: center;  /* 居中标题文本 */
