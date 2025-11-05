@@ -297,7 +297,7 @@ const selectedCategory = ref('guidance')
 </template>
 
 <style scoped>
-/* 保留原有选择器样式 */
+/* 基础样式保留 */
 .audio-selector label {
   font-weight: bold;
   margin-right: 1rem;
@@ -318,79 +318,64 @@ const selectedCategory = ref('guidance')
   border-color: #007bff;
 }
 
-/* 优化音频内容区域 */
-.audio-content {
-  margin-top: 1.5rem;
-}
-
-/* 多列网格布局 - 每行最多4列 */
+/* 关键修改 - 多列布局 */
 .audio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: repeat(4, 1fr); /* 强制4列 */
+  gap: 1rem;
   margin-top: 1.5rem;
 }
 
-/* 紧凑型音频项 */
+/* 紧凑音频项 */
 .audio-item {
   background: #f8f9fa;
-  border-radius: 10px;
-  padding: 1rem;
+  border-radius: 8px;
+  padding: 0.8rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
-.audio-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+/* 强制缩小音频控制条 */
+.audio-item audio {
+  width: 100% !important;
+  height: 30px !important;
+  min-width: 0; /* 重要：允许缩小 */
 }
 
-/* 紧凑标题样式 */
+/* 标题样式 */
 .audio-item h3 {
-  margin: 0 0 0.6rem 0;
-  color: #333;
-  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* 小型音频控制条 */
-.audio-item audio {
-  width: 100%;
-  height: 32px;
-  transform: scale(0.92);
-  transform-origin: left center;
-}
-
 /* 响应式调整 */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .audio-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr); /* 中屏幕3列 */
   }
 }
 
 @media (max-width: 768px) {
   .audio-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  }
-  
-  .audio-item {
-    padding: 0.8rem;
-  }
-  
-  .audio-item h3 {
-    font-size: 0.9rem;
+    grid-template-columns: repeat(2, 1fr); /* 小屏幕2列 */
   }
   
   .audio-item audio {
-    height: 28px;
-    transform: scale(0.9);
+    height: 28px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .audio-grid {
+    grid-template-columns: 1fr; /* 超小屏幕1列 */
   }
 }
 </style>
+
 
 
 
