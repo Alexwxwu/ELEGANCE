@@ -303,7 +303,7 @@ const buttons = [
 
 .logo {
   width: 260px; 
-  height: 220px; /* 成为正方形 */
+  height: 230px; /* 成为正方形 */
   /* border-radius: 50%;  可以注释掉或删除 */
   box-shadow: #ced3dc 0px 0px 3px 2px;
   margin-top: 40px;
