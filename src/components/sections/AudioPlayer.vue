@@ -297,50 +297,93 @@ const selectedCategory = ref('guidance')
 </template>
 
 <style scoped>
+/* 保留原有选择器样式 */
+.audio-selector label {
+  font-weight: bold;
+  margin-right: 1rem;
+  color: #555;
+}
+
+.audio-selector select {
+  padding: 0.5rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.audio-selector select:hover {
+  border-color: #007bff;
+}
+
+/* 优化音频内容区域 */
+.audio-content {
+  margin-top: 1.5rem; /* 减少顶部间距 */
+}
+
+/* 网格布局优化 */
+.audio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 更紧凑的列宽 */
+  gap: 1.5rem; /* 减少间距 */
+  margin-top: 1.5rem;
+}
+
+/* 音频项优化 */
 .audio-item {
-  background-color: #f8f9fa;
+  background: #f8f9fa;
   border-radius: 12px;
-  padding: 1.5rem;
-  margin: 15px 0;
+  padding: 1.2rem; /* 减少内边距 */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .audio-item:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.audio-title {
-  margin: 0 0 1rem 0;
+/* 标题样式优化 */
+.audio-item h3 {
+  margin: 0 0 0.8rem 0; /* 减少底部间距 */
   color: #333;
-  font-size: 1.2rem;
+  font-size: 1.1rem; /* 稍小字体 */
   text-align: center;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.3rem; /* 减少padding */
 }
 
-audio {
+/* 音频控制条优化 */
+.audio-item audio {
   width: 100%;
-  height: 40px; /* 减小高度 */
-  transform: scale(0.9); /* 整体缩放 */
+  height: 36px; /* 固定高度 */
+  transform: scale(0.95); /* 轻微缩小 */
   transform-origin: left center;
+  margin-top: 0.5rem;
 }
 
+/* 响应式调整 */
 @media (max-width: 768px) {
+  .audio-grid {
+    grid-template-columns: 1fr; /* 移动端单列 */
+    gap: 1rem;
+  }
+  
   .audio-item {
     padding: 1rem;
   }
   
-  audio {
-    height: 36px; /* 移动端更小 */
-    transform: scale(0.85);
+  .audio-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
   
-  .category-title {
-    font-size: 1.3rem;
-  }
-  
-  .section-title {
-    font-size: 1.8rem;
+  .audio-item audio {
+    height: 32px;
   }
 }
 </style>
