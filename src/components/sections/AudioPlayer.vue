@@ -160,9 +160,7 @@ const selectedCategory = ref('guidance')
               <source src="/output_audio/llm/sample2/USEV-I-qwen4b.wav" type="audio/wav">
             </audio>
           </div>
-
-
-          <!-- 其他llm音频... -->
+         
         </el-col>
       </el-row>
     </div>
@@ -175,7 +173,36 @@ const selectedCategory = ref('guidance')
 
       <el-row justify="center">
         <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10">
+          
+         <div class="audio-item">
+            <h3 class="audio-title">USEV-FR</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/USEV-FR.wav" type="audio/wav">
+            </audio>
+          </div>
+
           <div class="audio-item">
+            <h3 class="audio-title">USEV-I-FR</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/USEV-I-FR.wav" type="audio/wav">
+            </audio>
+          </div>
+
+           <div class="audio-item">
+            <h3 class="audio-title">FR-Mixture</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/FR-mix.wav" type="audio/wav">
+            </audio>
+          </div>
+
+         <div class="audio-item">
+            <h3 class="audio-title">FR-GT</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/FR-tgt.wav" type="audio/wav">
+            </audio>
+          </div>
+
+         <div class="audio-item">
             <h3 class="audio-title">USEV-PT</h3>
             <audio controls>
               <source src="/output_audio/crosslingual/USEV-PT.wav" type="audio/wav">
@@ -189,7 +216,80 @@ const selectedCategory = ref('guidance')
             </audio>
           </div>
 
-          <!-- 其他crosslingual音频... -->
+           <div class="audio-item">
+            <h3 class="audio-title">PT-Mixture</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/PT-mix.wav" type="audio/wav">
+            </audio>
+          </div>
+
+         <div class="audio-item">
+            <h3 class="audio-title">PT-GT</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/PT-tgt.wav" type="audio/wav">
+            </audio>
+          </div>
+
+
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-IT</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/USEV-IT.wav" type="audio/wav">
+            </audio>
+          </div>
+
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-I-IT</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/USEV-I-IT.wav" type="audio/wav">
+            </audio>
+          </div>
+
+           <div class="audio-item">
+            <h3 class="audio-title">IT-Mixture</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/IT-mix.wav" type="audio/wav">
+            </audio>
+          </div>
+
+         <div class="audio-item">
+            <h3 class="audio-title">IT-GT</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/IT-tgt.wav" type="audio/wav">
+            </audio>
+          </div>
+
+
+            <div class="audio-item">
+            <h3 class="audio-title">USEV-ES</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/USEV-ES.wav" type="audio/wav">
+            </audio>
+          </div>
+
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-I-ES</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/USEV-I-ES.wav" type="audio/wav">
+            </audio>
+          </div>
+
+           <div class="audio-item">
+            <h3 class="audio-title">ES-Mixture</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/ES-mix.wav" type="audio/wav">
+            </audio>
+          </div>
+
+         <div class="audio-item">
+            <h3 class="audio-title">ES-GT</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/ES-tgt.wav" type="audio/wav">
+            </audio>
+          </div>
+
+ 
+      
         </el-col>
       </el-row>
     </div>
@@ -197,26 +297,6 @@ const selectedCategory = ref('guidance')
 </template>
 
 <style scoped>
-.section-title {
-  text-align: center;
-  color: #333;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.category-selector {
-  margin: 2rem 0;
-}
-
-.category-title {
-  text-align: center;
-  color: #409eff;
-  margin: 2rem 0 1rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 .audio-item {
   background-color: #f8f9fa;
   border-radius: 12px;
@@ -240,11 +320,19 @@ const selectedCategory = ref('guidance')
 
 audio {
   width: 100%;
+  height: 40px; /* 减小高度 */
+  transform: scale(0.9); /* 整体缩放 */
+  transform-origin: left center;
 }
 
 @media (max-width: 768px) {
   .audio-item {
     padding: 1rem;
+  }
+  
+  audio {
+    height: 36px; /* 移动端更小 */
+    transform: scale(0.85);
   }
   
   .category-title {
@@ -256,3 +344,5 @@ audio {
   }
 }
 </style>
+
+
