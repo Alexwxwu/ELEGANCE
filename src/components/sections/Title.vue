@@ -166,7 +166,6 @@ const buttons = [
 
     <!-- 地址名单 -->
     <el-row justify="center">
-      <a :href=address.homepage v-for="address in addresses">
         <el-button class="title-button" type="primary" text>
           <el-avatar v-if="address.icon" :size="40" :src="address.icon" />
           <span class="address">
@@ -248,6 +247,7 @@ const buttons = [
 /* 地址属性 */
 .address {
   font-size: 18px;
+	color: #000000; /* 黑色 */
 }
 
 /* 地址上标属性 */
@@ -302,7 +302,7 @@ const buttons = [
 } */
 
 .logo {
-  width: 200px; 
+  width: 260px; 
   height: 200px; /* 成为正方形 */
   /* border-radius: 50%;  可以注释掉或删除 */
   box-shadow: #ced3dc 0px 0px 3px 2px;
