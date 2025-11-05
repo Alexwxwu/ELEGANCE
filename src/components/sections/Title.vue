@@ -293,10 +293,18 @@ const buttons = [
   margin: 0;
 }
 
-.logo {
+/* .logo {
   width: 200px; 
   height: 180px;
   border-radius: 50%;
+  box-shadow: #ced3dc 0px 0px 3px 2px;
+  margin-top: 40px;
+} */
+
+.logo {
+  width: 200px; 
+  height: 200px; /* 成为正方形 */
+  /* border-radius: 50%;  可以注释掉或删除 */
   box-shadow: #ced3dc 0px 0px 3px 2px;
   margin-top: 40px;
 }
