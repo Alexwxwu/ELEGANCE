@@ -294,8 +294,8 @@ const buttons = [
 }
 
 .logo {
-  width: 150px; 
-  height: 150px;
+  width: 180px; 
+  height: 160px;
   border-radius: 50%;
   box-shadow: #ced3dc 0px 0px 3px 2px;
   margin-top: 40px;
