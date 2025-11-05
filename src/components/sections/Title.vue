@@ -4,7 +4,7 @@ import { ElIcon } from 'element-plus'
 import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@element-plus/icons-vue'
 
 // logo地址，没有则置为""即可
-const logo = './logo.png'
+const logo = './icon.png'
 
 // 标题
 const title = 'ELEGANCE: Efficient LLM Guidance for Audio Visual Target Speech Extraction'
