@@ -164,15 +164,17 @@ const buttons = [
       </a>
     </el-row>
 
-   <!-- 地址名单，不加超链接 -->
-<el-row justify="center">
-  <el-button class="title-button" type="primary" text>
-    <el-avatar v-if="address.icon" :size="40" :src="address.icon" />
-    <span class="address">
-      <sup v-if="address.address_flag" class="address_sup">{{ address.address_flag }}</sup>{{ address.name }}
-    </span>
-  </el-button>
-</el-row>
+   <!-- 地址名单 -->
+ <el-row justify="center">
+      <a :href=address.homepage v-for="address in addresses">
+        <el-button class="title-button" type="primary" text>
+          <el-avatar v-if="address.icon" :size="40" :src="address.icon" />
+          <span class="address">
+            <sup v-if="address.address_flag" class="address_sup">{{ address.address_flag }}</sup>{{ address.name }}
+          </span>
+        </el-button>
+      </a>
+    </el-row>
 
     <!-- 共一和通讯提示内容 -->
     <el-row justify="center" class="con-cor">
