@@ -1,7 +1,7 @@
 # Overview
 
 ### ELEGANCE framework
-<img src="/ELEGANCE/figs/LLM-TSE-mainfig.png" alt="Overview of Three Guidance Strategies" width="2000"/>
+<img src="/ELEGANCE/figs/LLM-TSE-mainfig.png" alt="Overview of Three Guidance Strategies" width="1000"/>
 * Output guidance: AV-TSE with linguistic constraints, where both PLM and PSLM will be utilized during training with an adapter to align the latent semantic space.
 * Intermediate guidance: AV-TSE with linguistic prediction, jointly modeling the AV-TSE task and the acoustic-informed LLM next-token prediction (NTP) task. Empower AV-TSE with linguistic forecasting ability with NTP loss.
 * Input guidance:  AV-TSE with linguistic prior. The LLM guidance and zero embedding will be added as input features in an interleaved way. The goal is to reduce over-reliance of the AV-TSE model on transcripts, which are not available during inference.
@@ -19,7 +19,7 @@
 ![](/ELEGANCE/figs/LLM-SIZE&TYPE.png)
  
 ### Linguistic knowledge Compensation when the primary visual cue is impaired
-<img src="/ELEGANCE/figs/visual-impaired-compensation.png" alt="visual impairment" width="1000"/>
+<img src="/ELEGANCE/figs/visual-impaired-compensation.png" alt="visual impairment" width="600"/>
 
 ### Generalization on Cross-lingual settings
 ![SI-SDR-i on cross-lingual settings](/ELEGANCE/figs/monolingual-sisdri.png)
