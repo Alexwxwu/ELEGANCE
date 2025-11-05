@@ -191,7 +191,7 @@ const selectedCategory = ref('guidance')
            <div class="audio-item">
             <h3 class="audio-title">FR-Mixture</h3>
             <audio controls>
-              <source src="/output_audio/crosslingual/FR_mix.wav" type="audio/wav">
+              <source src="/output_audio/crosslingual/FR-mix.wav" type="audio/wav">
             </audio>
           </div>
 
