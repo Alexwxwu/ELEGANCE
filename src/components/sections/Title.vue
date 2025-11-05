@@ -76,7 +76,7 @@ const emphases = [
 	"A novel framework that incorporates 3 different linguistic knowledge from LLMs into \
 AV-TSE models: linguistic constraints, linguistic prediction, and linguistic prior.",
 	"Comprehensive experiments with RoBERTa, Qwen3-0.6B, and Qwen3-4B on USEV and AV-Mamba.",
-	"Investigations into monolingual mixtures with unseen languages and zero-shot scenarios, including target speaker switches, more interfering speakers, and OOD test sets."
+	"Investigations into monolingual mixtures with unseen languages and zero-shot scenarios including target speaker switches, two interfering speakers, LRS3 test set."
   // "🎉 [ABCD 2024] Poster",
   // "🥰 欢迎关注“减论”微信公众号/B站/知乎/小红书",
   // "传递人工智能算法科普教育的减约理解",
