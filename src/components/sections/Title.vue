@@ -246,7 +246,6 @@ const buttons = [
 /* 地址属性 */
 .address {
   font-size: 18px;
-	color: #000000; /* 黑色 */
 }
 
 /* 地址上标属性 */
