@@ -15,24 +15,28 @@
 
         <!-- local -->
         <el-container class="video-container">
+          <div class="audio-title">USEV (Switch sample1)</div>
           <video controls muted preload playsinline>
             <source src="/output_video/usev-switch/usev-est.mp4" type="video/mp4">
           </video>
         </el-container>
         <!-- local -->
         <el-container class="video-container">
+          <div class="audio-title">USEV-M-Roberta (Switch sample1)</div>
           <video controls muted preload playsinline>
             <source src="/output_video/usev-switch/usev-m-est.mp4" type="video/mp4">
           </video>
         </el-container>
           <!-- local -->
         <el-container class="video-container">
+            <div class="audio-title">Mixture (Switch sample1)</div>
           <audio controls muted preload playsinline>
             <source src="/output_video/usev-switch/mix.wav">
           </audio>
         </el-container>
             <!-- local -->
         <el-container class="video-container">
+            <div class="audio-title">GT (Switch sample1)</div>
           <audio controls muted preload playsinline>
             <source src="/output_video/usev-switch/tgt.wav">
           </audio>
@@ -41,24 +45,28 @@
 
          <!-- local -->
         <el-container class="video-container">
+            <div class="audio-title">AV-Mamba (Switch sample2)</div>
           <video controls muted preload playsinline>
             <source src="/output_video/avmamba-switch/avmamba-est.mp4" type="video/mp4">
           </video>
         </el-container>
         <!-- local -->
         <el-container class="video-container">
+          <div class="audio-title">AV-Mamba-I-Roberta (Switch sample2)</div>
           <video controls muted preload playsinline>
             <source src="/output_video/avmamba-switch/avmamba-i-est.mp4" type="video/mp4">
           </video>
         </el-container>
           <!-- local -->
         <el-container class="video-container">
+           <div class="audio-title">Mixture (Switch sample2)</div>
           <audio controls muted preload playsinline>
             <source src="/output_video/avmamba-switch/mix.wav">
           </audio>
         </el-container>
             <!-- local -->
         <el-container class="video-container">
+            <div class="audio-title">GT (Switch sample2)</div>
           <audio controls muted preload playsinline>
             <source src="/output_video/avmamba-switch/tgt.wav">
           </audio>
@@ -80,7 +88,7 @@
 
 iframe, video {
   aspect-ratio: 16 / 9;
-  width: 100%;
+  width: 70%;
 }
 
 </style>
