@@ -320,72 +320,77 @@ const selectedCategory = ref('guidance')
 
 /* 优化音频内容区域 */
 .audio-content {
-  margin-top: 1.5rem; /* 减少顶部间距 */
-}
-
-/* 网格布局优化 */
-.audio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 更紧凑的列宽 */
-  gap: 1.5rem; /* 减少间距 */
   margin-top: 1.5rem;
 }
 
-/* 音频项优化 */
+/* 多列网格布局 - 每行最多4列 */
+.audio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+/* 紧凑型音频项 */
 .audio-item {
   background: #f8f9fa;
-  border-radius: 12px;
-  padding: 1.2rem; /* 减少内边距 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .audio-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* 标题样式优化 */
+/* 紧凑标题样式 */
 .audio-item h3 {
-  margin: 0 0 0.8rem 0; /* 减少底部间距 */
+  margin: 0 0 0.6rem 0;
   color: #333;
-  font-size: 1.1rem; /* 稍小字体 */
+  font-size: 1rem;
   text-align: center;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 0.3rem; /* 减少padding */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* 音频控制条优化 */
+/* 小型音频控制条 */
 .audio-item audio {
   width: 100%;
-  height: 36px; /* 固定高度 */
-  transform: scale(0.95); /* 轻微缩小 */
+  height: 32px;
+  transform: scale(0.92);
   transform-origin: left center;
-  margin-top: 0.5rem;
 }
 
 /* 响应式调整 */
+@media (max-width: 1024px) {
+  .audio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .audio-grid {
-    grid-template-columns: 1fr; /* 移动端单列 */
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
   
   .audio-item {
-    padding: 1rem;
+    padding: 0.8rem;
   }
   
   .audio-item h3 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
   }
   
   .audio-item audio {
-    height: 32px;
+    height: 28px;
+    transform: scale(0.9);
   }
 }
 </style>
+
 
 
