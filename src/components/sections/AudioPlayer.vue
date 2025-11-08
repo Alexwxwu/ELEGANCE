@@ -105,59 +105,94 @@ const selectedCategory = ref('guidance')
 
       <el-row justify="center">
         <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10">
+         
+
           <div class="audio-item">
-            <h3 class="audio-title">USEV (sample1)</h3>
+            <h3 class="audio-title">Mixture (sample1)</h3>
             <audio controls>
-              <source src="/output_audio/llm/sample1/USEV.wav" type="audio/wav">
+              <source src="/output_audio/llm/sample2/mix.wav" type="audio/wav">
             </audio>
           </div>
 
           <div class="audio-item">
-            <h3 class="audio-title">USEV-I-Roberta (sample1)</h3>
+            <h3 class="audio-title">GT (sample1)</h3>
             <audio controls>
-              <source src="/output_audio/llm/sample1/USEV-I-Roberta.wav" type="audio/wav">
-            </audio>
-          </div>
-         
-          <div class="audio-item">
-            <h3 class="audio-title">USEV-I-Qwen0.6b (sample1)</h3>
-            <audio controls>
-              <source src="/output_audio/llm/sample1/USEV-I-qwen06b.wav" type="audio/wav">
-            </audio>
-          </div>
-         
-          <div class="audio-item">
-            <h3 class="audio-title">USEV-I-Qwen4b (sample1)</h3>
-            <audio controls>
-              <source src="/output_audio/llm/sample1/USEV-I-qwen4b.wav" type="audio/wav">
+              <source src="/output_audio/llm/sample2/tgt.wav" type="audio/wav">
             </audio>
           </div>
 
+         
          <div class="audio-item">
-            <h3 class="audio-title">USEV (sample2)</h3>
+            <h3 class="audio-title">USEV (sample1)</h3>
             <audio controls>
               <source src="/output_audio/llm/sample2/USEV.wav" type="audio/wav">
             </audio>
           </div>
 
           <div class="audio-item">
-            <h3 class="audio-title">USEV-I-Roberta (sample2)</h3>
+            <h3 class="audio-title">USEV-I-Roberta (sample1)</h3>
             <audio controls>
               <source src="/output_audio/llm/sample2/USEV-I-Roberta.wav" type="audio/wav">
             </audio>
           </div>
          
           <div class="audio-item">
-            <h3 class="audio-title">USEV-I-Qwen0.6b (sample2)</h3>
+            <h3 class="audio-title">USEV-I-Qwen0.6b (sample1)</h3>
             <audio controls>
               <source src="/output_audio/llm/sample2/USEV-I-qwen06b.wav" type="audio/wav">
             </audio>
           </div>
          
           <div class="audio-item">
-            <h3 class="audio-title">USEV-I-Qwen4b (sample2)</h3>
+            <h3 class="audio-title">USEV-I-Qwen4b (sample1)</h3>
             <audio controls>
               <source src="/output_audio/llm/sample2/USEV-I-qwen4b.wav" type="audio/wav">
+            </audio>
+          </div>
+
+
+
+
+          <div class="audio-item">
+            <h3 class="audio-title">Mixture (sample2)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample1/mix.wav" type="audio/wav">
+            </audio>
+          </div>
+
+          <div class="audio-item">
+            <h3 class="audio-title">GT (sample2)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample1/tgt.wav" type="audio/wav">
+            </audio>
+          </div>
+
+
+           <div class="audio-item">
+            <h3 class="audio-title">USEV (sample2)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample1/USEV.wav" type="audio/wav">
+            </audio>
+          </div>
+
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-I-Roberta (sample2)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample1/USEV-I-Roberta.wav" type="audio/wav">
+            </audio>
+          </div>
+         
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-I-Qwen0.6b (sample2)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample1/USEV-I-qwen06b.wav" type="audio/wav">
+            </audio>
+          </div>
+         
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-I-Qwen4b (sample2)</h3>
+            <audio controls>
+              <source src="/output_audio/llm/sample1/USEV-I-qwen4b.wav" type="audio/wav">
             </audio>
           </div>
          
@@ -173,7 +208,23 @@ const selectedCategory = ref('guidance')
 
       <el-row justify="center">
         <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10">
-          
+
+
+          <div class="audio-item">
+            <h3 class="audio-title">FR-Mixture</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/FR-mix.wav" type="audio/wav">
+            </audio>
+          </div>
+
+         <div class="audio-item">
+            <h3 class="audio-title">FR-GT</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/FR_tgt.wav" type="audio/wav">
+            </audio>
+          </div>
+
+         
          <div class="audio-item">
             <h3 class="audio-title">USEV-FR</h3>
             <audio controls>
@@ -188,34 +239,9 @@ const selectedCategory = ref('guidance')
             </audio>
           </div>
 
-           <div class="audio-item">
-            <h3 class="audio-title">FR-Mixture</h3>
-            <audio controls>
-              <source src="/output_audio/crosslingual/FR-mix.wav" type="audio/wav">
-            </audio>
-          </div>
+           
 
-         <div class="audio-item">
-            <h3 class="audio-title">FR-GT</h3>
-            <audio controls>
-              <source src="/output_audio/crosslingual/FR_tgt.wav" type="audio/wav">
-            </audio>
-          </div>
-
-         <div class="audio-item">
-            <h3 class="audio-title">USEV-PT</h3>
-            <audio controls>
-              <source src="/output_audio/crosslingual/USEV-PT.wav" type="audio/wav">
-            </audio>
-          </div>
-
-          <div class="audio-item">
-            <h3 class="audio-title">USEV-I-PT</h3>
-            <audio controls>
-              <source src="/output_audio/crosslingual/USEV-I-PT.wav" type="audio/wav">
-            </audio>
-          </div>
-
+         
            <div class="audio-item">
             <h3 class="audio-title">PT-Mixture</h3>
             <audio controls>
@@ -230,20 +256,23 @@ const selectedCategory = ref('guidance')
             </audio>
           </div>
 
-
           <div class="audio-item">
-            <h3 class="audio-title">USEV-IT</h3>
+            <h3 class="audio-title">USEV-PT</h3>
             <audio controls>
-              <source src="/output_audio/crosslingual/USEV-IT.wav" type="audio/wav">
+              <source src="/output_audio/crosslingual/USEV-PT.wav" type="audio/wav">
             </audio>
           </div>
 
           <div class="audio-item">
-            <h3 class="audio-title">USEV-I-IT</h3>
+            <h3 class="audio-title">USEV-I-PT</h3>
             <audio controls>
-              <source src="/output_audio/crosslingual/USEV-I-IT.wav" type="audio/wav">
+              <source src="/output_audio/crosslingual/USEV-I-PT.wav" type="audio/wav">
             </audio>
           </div>
+
+
+
+          
 
            <div class="audio-item">
             <h3 class="audio-title">IT-Mixture</h3>
@@ -259,20 +288,22 @@ const selectedCategory = ref('guidance')
             </audio>
           </div>
 
-
-            <div class="audio-item">
-            <h3 class="audio-title">USEV-ES</h3>
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-IT</h3>
             <audio controls>
-              <source src="/output_audio/crosslingual/USEV-ES.wav" type="audio/wav">
+              <source src="/output_audio/crosslingual/USEV-IT.wav" type="audio/wav">
             </audio>
           </div>
 
           <div class="audio-item">
-            <h3 class="audio-title">USEV-I-ES</h3>
+            <h3 class="audio-title">USEV-I-IT</h3>
             <audio controls>
-              <source src="/output_audio/crosslingual/USEV-I-ES.wav" type="audio/wav">
+              <source src="/output_audio/crosslingual/USEV-I-IT.wav" type="audio/wav">
             </audio>
           </div>
+
+
+            
 
            <div class="audio-item">
             <h3 class="audio-title">ES-Mixture</h3>
@@ -285,6 +316,19 @@ const selectedCategory = ref('guidance')
             <h3 class="audio-title">ES-GT</h3>
             <audio controls>
               <source src="/output_audio/crosslingual/ES_tgt.wav" type="audio/wav">
+            </audio>
+          </div>
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-ES</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/USEV-ES.wav" type="audio/wav">
+            </audio>
+          </div>
+
+          <div class="audio-item">
+            <h3 class="audio-title">USEV-I-ES</h3>
+            <audio controls>
+              <source src="/output_audio/crosslingual/USEV-I-ES.wav" type="audio/wav">
             </audio>
           </div>
 
