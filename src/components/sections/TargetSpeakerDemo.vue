@@ -13,21 +13,7 @@
     <el-row justify="center">
       <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10" >
 
-        <!-- local -->
-        <el-container class="video-container">
-          <div class="audio-title">USEV </div>
-          <video controls muted preload playsinline>
-            <source src="/output_video/usev-switch/usev-est.mp4" type="video/mp4">
-          </video>
-        </el-container>
-        <!-- local -->
-        <el-container class="video-container">
-          <div class="audio-title">USEV-M-Roberta </div>
-          <video controls muted preload playsinline>
-            <source src="/output_video/usev-switch/usev-m-est.mp4" type="video/mp4">
-          </video>
-        </el-container>
-          <!-- local -->
+           <!-- local -->
         <el-container class="video-container">
             <div class="audio-title">Mixture </div>
           <audio controls muted preload playsinline>
@@ -42,6 +28,38 @@
           </audio>
         </el-container>
 
+        <!-- local -->
+        <el-container class="video-container">
+          <div class="audio-title">USEV </div>
+          <video controls muted preload playsinline>
+            <source src="/output_video/usev-switch/usev-est.mp4" type="video/mp4">
+          </video>
+        </el-container>
+        <!-- local -->
+        <el-container class="video-container">
+          <div class="audio-title">USEV-M-Roberta </div>
+          <video controls muted preload playsinline>
+            <source src="/output_video/usev-switch/usev-m-est.mp4" type="video/mp4">
+          </video>
+        </el-container>
+        
+
+
+         
+          <!-- local -->
+        <el-container class="video-container">
+           <div class="audio-title">Mixture </div>
+          <audio controls muted preload playsinline>
+            <source src="/output_video/avmamba-switch/mix.wav">
+          </audio>
+        </el-container>
+            <!-- local -->
+        <el-container class="video-container">
+            <div class="audio-title">GT </div>
+          <audio controls muted preload playsinline>
+            <source src="/output_video/avmamba-switch/tgt.wav">
+          </audio>
+        </el-container>
 
          <!-- local -->
         <el-container class="video-container">
@@ -56,20 +74,6 @@
           <video controls muted preload playsinline>
             <source src="/output_video/avmamba-switch/avmamba-i-est.mp4" type="video/mp4">
           </video>
-        </el-container>
-          <!-- local -->
-        <el-container class="video-container">
-           <div class="audio-title">Mixture </div>
-          <audio controls muted preload playsinline>
-            <source src="/output_video/avmamba-switch/mix.wav">
-          </audio>
-        </el-container>
-            <!-- local -->
-        <el-container class="video-container">
-            <div class="audio-title">GT </div>
-          <audio controls muted preload playsinline>
-            <source src="/output_video/avmamba-switch/tgt.wav">
-          </audio>
         </el-container>
          
          
