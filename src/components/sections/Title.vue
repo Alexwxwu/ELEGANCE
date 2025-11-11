@@ -88,7 +88,7 @@ const buttons = [
   {
     disabled: false,
     name: "Paper",
-   link: "arixv",
+   link: "https://arxiv.org/abs/2511.06288",
 	component: Document,
   },
   // {
