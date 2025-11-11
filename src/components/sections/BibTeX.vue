@@ -6,7 +6,7 @@ export default {
         "@article{WU2025ELEGANCE,",
         "    title={ELEGANCE},",
         "    author={Wenxuan WU},",
-         " year={2025},"
+         " year={2025},",
       "  url={https://arxiv.org/abs/2511.06288}, "
         "}",
       ],
