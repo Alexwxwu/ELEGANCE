@@ -79,6 +79,41 @@
          
       </el-col>
     </el-row>
+
+
+
+
+    <el-row justify="center">
+      <h1 class="section-title">Real-world Scenarios</h1>
+    </el-row>
+    <!-- 每个网站的视频的iframe可能不一致，最好在这里手动调整 -->
+    <el-row justify="center">
+      <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10" >
+            <!-- local -->
+       <!-- local -->
+       <el-container class="video-container">
+        <div class="audio-title">AV-Mamba-M (Demo1)</div>
+      <video controls muted preload playsinline>
+        <source src="/output_video/real_demo/trump.mp4" type="video/mp4">
+      </video>
+    </el-container>
+    <!-- local -->
+    <el-container class="video-container">
+      <div class="audio-title">AV-Mamba-M (Demo2) </div>
+      <video controls muted preload playsinline>
+        <source src="/output_video/real_demo/tom.mp4" type="video/mp4">
+      </video>
+    </el-container>
+        
+
+
+      </el-col>
+    </el-row>
+
+
+
+
+
   </div>
 </template>
 
